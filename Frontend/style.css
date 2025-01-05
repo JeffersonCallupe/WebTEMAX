@@ -3,3 +3,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components{
+    .imgMarca{
+        @apply  object-center bg-cover 
+    }
+    .marcaContainer{
+        @apply h-16 w-20 flex items-center justify-center md:h-20 md:w-24
+    }
+}

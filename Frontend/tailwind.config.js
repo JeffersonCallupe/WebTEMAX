@@ -14,7 +14,10 @@ export default {
       },
 
       colors: {
-        'azul-oscuro': '#041C3C',
+        'azul-oscuro-title': '#041C3C',
+        'azul-parrafo':'#0F172A',
+        'gray-title-min': '#555555',
+        'azul-line':'#4555BC'
       }
 
     },

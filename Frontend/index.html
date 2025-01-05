@@ -9,7 +9,6 @@
 
     <script src="https://kit.fontawesome.com/efcdc368ed.js" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
 
   </head>
   <body>
@@ -29,7 +28,8 @@
         <img
           class="h-6 w-auto sm:h-7"
           src="./public//img/logoTemax.png"
-          alt=""
+          alt="logo-Temax"
+          loading="lazy"
         />
       </a>
 
@@ -39,7 +39,7 @@
           x-cloak
           @click="isOpen = !isOpen"
           type="button"
-          class="text-gray-500 md:invisible hover:text-gray-600 focus:text-gray-600 focus:outline-none"
+          class="text-white/70 md:invisible hover:text-gray-600 focus:text-white/80 focus:outline-none"
           aria-label="toggle menu"
         >
           <svg
@@ -83,24 +83,24 @@
       :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
       class="absolute inset-x-0 z-20 w-full py-2 transition-all duration-300 ease-in-out md:relative md:top-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:opacity-100"
     >
-      <div class="flex flex-col bg-black px-6 md:mx-6 md:flex-row">
+      <div class="flex flex-col text-center bg-black px-6 md:mx-6 md:flex-row">
         <a
-          class="my-3 transform text-gray-700 transition-colors duration-300 hover:text-blue-500 md:mx-4 md:my-0"
+          class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 md:mx-4 md:my-0"
           href="#"
           >Inicio</a
         >
         <a
-          class="my-3 transform text-gray-700 transition-colors duration-300 hover:text-blue-500 md:mx-4 md:my-0"
+          class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 md:mx-4 md:my-0"
           href="./src/pages/productos.html"
           >Produtos</a
         >
         <a
-          class="my-3 transform text-gray-700 transition-colors duration-300 hover:text-blue-500 md:mx-4 md:my-0"
+          class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 md:mx-4 md:my-0"
           href="#"
           >Nosotros</a
         >
         <a
-          class="my-3 transform text-gray-700 transition-colors duration-300 hover:text-blue-500 md:mx-4 md:my-0"
+          class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 md:mx-4 md:my-0"
           href="#"
           >Contacto</a
         >
@@ -123,6 +123,7 @@
         src="./public/img/portada1.webp"
         class="absolute left-1/2 top-1/2 block h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
         alt="portada1Temax"
+        loading="lazy"
       />
 
       <section
@@ -164,6 +165,7 @@
         src="./public/img/portada2.webp"
         class="absolute left-1/2 top-1/2 block h-full w-full -translate-x-1/2 -translate-y-1/2 object-cover"
         alt="portada2Temax"
+        loading="lazy"
       />
 
       <section
@@ -272,6 +274,30 @@
 </div> 
 
 
+  <!-- MARCAS -->
+
+<section class="container flex mx-auto  flex-col w-[90%] mt-5 ">
+  <section >
+    <h4 class="text-gray-title-min font-black text-center text-lg" >Marcas que respaldan nuestro compromiso</h4>
+  </section  >
+  <section class="flex flex-wrap gap-3 items-center justify-center">
+    <figure class="marcaContainer"><img class="imgMarca" src="./public/img/marcas/arcair.webp" alt="Arcair"  loading="lazy"></figure>
+    <figure class="marcaContainer"><img class="imgMarca" src="./public/img/marcas/klinsgspor.webp" alt="klinsgspor"  loading="lazy"></figure>
+    <figure class="marcaContainer"><img class="imgMarca" src="./public/img/marcas/KNAUF.webp" alt="Knauf"  loading="lazy"></figure>
+    <figure class="marcaContainer"><img class="imgMarca" src="./public/img/marcas/nazca-soldexa.webp" alt="Nazca-soldexa"  loading="lazy"></figure>
+    <figure class="marcaContainer"><img class="imgMarca" src="./public/img/marcas/norton.png" alt="Norton"  loading="lazy"></figure>
+    <figure class="marcaContainer"><img class="imgMarca" src="./public/img/marcas/soldexa.webp" alt="Soldexa"  loading="lazy"></figure>
+    <figure class="marcaContainer"><img class="imgMarca" src="./public/img/marcas/thermal.webp" alt="Thermal Dynamics"  loading="lazy"></figure>
+    <figure class="marcaContainer"><img class="imgMarca" src="./public/img/marcas/victor.webp" alt="Victor Technologies"  loading="lazy"></figure>
+  </section>
+</section>
+
+
+
+<section class="container mx-auto bg-blue-100 p-4 sm:bg-green-100 md:bg-yellow-100 lg:bg-red-100 xl:bg-purple-100">
+  <h1 class="text-2xl">Contenedor adaptativo</h1>
+  <p>El fondo cambia de color según el tamaño de la pantalla.</p>
+</section>
 
 
 
@@ -279,10 +305,7 @@
 
    
    
-<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
-    <script type="module" src="/src/main.js"></script>
-
-
-    
+  <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+  <script type="module" src="/src/main.js"></script>
   </body>
 </html>
