@@ -276,7 +276,7 @@
 
   <!-- MARCAS -->
 
-<section class="container flex mx-auto  flex-col w-[90%] mt-5 ">
+<section class="container mx-auto flex   flex-col w-[90%] mt-5">
   <section >
     <h4 class="text-gray-title-min font-black text-center text-lg" >Marcas que respaldan nuestro compromiso</h4>
   </section  >
@@ -293,12 +293,167 @@
 </section>
 
 
+  <!-- PRIMER INFO : POTENCIA Y PRECISIÓN -->
 
-<section class="container mx-auto bg-blue-100 p-4 sm:bg-green-100 md:bg-yellow-100 lg:bg-red-100 xl:bg-purple-100">
-  <h1 class="text-2xl">Contenedor adaptativo</h1>
-  <p>El fondo cambia de color según el tamaño de la pantalla.</p>
+<section class="container mx-auto flex flex-col  w-[90%] mt-5 gap-7" >
+
+  <section class="flex flex-col ">
+    <aside> <hr class="w-12 h-2 bg-azul-line"> </aside>
+    <article>
+      <h1 class="font-roboto text-[28px] font-extrabold pt-2 text-azul-oscuro-title" >Potencia y precisión en soldadura con Temax</h1>
+      <p class="text-azul-parrafo leading-7 pt-2 font-roboto" >Descubre nuestros productos de alta calidad para cada proyecto de soldadura. Ofrecemos equipos y materiales diseñados para brindar resistencia, eficiencia y seguridad en cada aplicación. Lleva tus proyectos al siguiente nivel con la precisión que solo Temax puede ofrecer</p>
+    </article>
+    <aside class="pt-3 cursor-pointer" >
+      <a  class="text-[#2563EB] font-medium font-roboto pr-2" href="#">Contactar</a>
+      <svg class="inline w-6 h-6 text-[#2563EB]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+      </svg>
+    </aside>
+  </section>
+
+  <!-- IMAGENES CON GRID -->
+  <section class="grid grid-cols-12 grid-rows-11 w-full h-80 gap-3 mt-2">
+    <figure  class="col-[1/5] row-[3/12] " >
+      <img 
+        src="./img/soldador/soldador1.webp" 
+        alt="Soldador" 
+        loading="lazy" 
+        class="w-full h-full object-cover rounded-xl" />
+    </figure>
+
+    <figure  class="col-[5/9] row-[1/10]  ">
+      <img 
+        src="./img/soldador/soldador2.webp" 
+        alt="Soldador" 
+        loading="lazy" 
+        class="w-full h-full object-cover rounded-xl"/>
+    
+    </figure>
+
+    <figure class="col-[9/13] row-[2/11] ">
+      <img 
+        src="./img/soldador/soldador3.webp" 
+        alt="Soldador" 
+        loading="lazy" 
+        class="w-full h-full object-cover rounded-xl"/>
+    </figure>
+  </section>
 </section>
 
+  <!-- SEGUNDA INFO: NUESTROS PRODUCTOS -->
+<section class="container mx-auto w-[90%] mt-10">
+  <aside class="flex flex-col">
+    <aside> 
+      <hr class="w-12 h-2 bg-azul-line"> 
+    </aside>
+    <aside>
+      <h1 class="font-roboto text-[28px] font-extrabold pt-2 text-azul-oscuro-title">Nuestros productos</h1>
+    </aside>
+  </aside>
+  <section>
+    <p class="text-azul-parrafo leading-7 pt-2 font-roboto">
+      Nuestra línea de productos incluye equipos y accesorios de soldadura
+      de alta calidad, desde electrodos hasta sistemas de protección y
+      herramientas especializadas. En Temax, aseguramos que cada pieza
+      cumpla con los estándares de calidad para ofrecerte soluciones
+      confiables y efectivas para tus proyectos industriales
+    </p>
+  </section>
+  
+
+
+</section>
+
+<!-- CATEGORIAS -->
+ <section class="container mx-auto w-[90%] mt-7">
+  <section class="grid grid-cols-12 grid-rows-12 w-full h-[900px] gap-5 mt-2">
+
+  
+    <figure class="col-[1/13] row-[1/4] relative">
+      <img 
+        src="./img/categoria/materiales.webp" 
+        alt="Materiales de soldadura de alta calidad" 
+        loading="lazy" 
+        class="w-full h-full object-cover" />
+        
+      <aside class="absolute py-1 px-2 inset-0 flex flex-col justify-center  text-white bg-black/30 ">
+        <h1 class="text-lg font-bold font-inter px-4">Materiales de soldadura</h1>
+        <p class="text-xs mt-1 mb-4 px-4 font-inter font-extralight leading-5">
+          Descubre nuestra gama de materiales de soldadura diseñados para ofrecer máxima calidad y precisión, garantizando uniones fuertes y duraderas en cada aplicación
+        </p>
+        <aside class="px-4 ">
+          <a  class=" font-inter text-sm py-2 px-3 border border-white" href="#">Ver productos</a>
+        </aside>
+      </aside>
+
+    </figure>
+    
+
+    <figure 
+      class="col-[1/13] row-[4/7] relative">
+      <img 
+      src="./img/categoria/abrasivos.webp" 
+      alt="Abrasivos sólidos de alta calidad" 
+      loading="lazy" 
+      class="w-full h-full object-cover" />
+
+      <aside class="absolute py-1 px-2 inset-0 flex flex-col justify-center  text-white bg-black/30 ">
+        <h1 class="text-lg font-bold font-inter px-4">Abrasivos sólidos</h1>
+        <p class="text-xs mt-1 mb-4 px-4 font-inter font-extralight leading-5">
+          Nuestros abrasivos sólidos ofrecen un rendimiento superior, proporcionando el desgaste necesario para trabajos de soldadura y lograr acabados impecables y profesionales en cualquier superficie
+        </p>
+        <aside class="px-4 ">
+          <a  class=" font-inter text-sm py-2 px-3 border border-white" href="#">Ver productos</a>
+        </aside>
+      </aside>
+    </figure>
+
+
+    <figure class="col-[1/13] row-[7/10] relative">
+      <img 
+      src="./img/categoria/accesorios.webp" 
+      alt="Accesorios de alta calidad" 
+      loading="lazy" 
+      class="w-full h-full object-cover" />
+
+      <aside class="absolute py-1 px-2 inset-0 flex flex-col justify-center  text-white bg-black/30 ">
+        <h1 class="text-lg font-bold font-inter px-4">Accesorios</h1>
+        <p class="text-xs mt-1 mb-5 px-4 font-inter font-extralight leading-5">
+          Herramientas esenciales para un trabajo de soldadura preciso y seguro. Potencia tus proyectos y asegura resultados de calidad
+        </p>
+        <aside class="px-4 ">
+          <a  class=" font-inter text-sm py-2 px-3 border border-white" href="#">Ver productos</a>
+        </aside>
+      </aside>
+
+    </figure>
+
+    <figure class="col-[1/13] row-[10/13] relative">
+      <img 
+      src="./img/categoria/siliconas.webp" 
+      alt="Siliconas de alta calidad" 
+      loading="lazy" 
+      class="w-full h-full object-cover" />
+
+      <aside class="absolute py-1 px-2 inset-0 flex flex-col justify-center  text-white bg-black/30 ">
+        <h1 class="text-lg font-bold font-inter px-4">Siliconas</h1>
+        <p class="text-xs mt-1 mb-5 px-4 font-inter font-extralight leading-5">
+          Protección y durabilidad en cada aplicación. Silicones de alto rendimiento que aseguran un sellado perfecto
+        </p>
+        <aside class="px-4 ">
+          <a  class=" font-inter text-sm py-2 px-3 border border-white" href="#">Ver productos</a>
+        </aside>
+      </aside>
+
+    </figure>
+
+  </section>
+ </section>
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
 
 
 

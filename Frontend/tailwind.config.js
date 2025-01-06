@@ -11,8 +11,8 @@ export default {
         'montserrat': [ 'Montserrat', 'serif'],
         'roboto': [ 'Roboto', 'serif'],
         'actor': ['Actor', 'serif'],
+        'inter': [ 'Inter', 'serif']
       },
-
       colors: {
         'azul-oscuro-title': '#041C3C',
         'azul-parrafo':'#0F172A',
