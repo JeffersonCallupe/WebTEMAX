@@ -9,6 +9,6 @@
         @apply  object-center bg-cover 
     }
     .marcaContainer{
-        @apply h-16 w-20 flex items-center justify-center md:h-20 md:w-24
+        @apply h-16 w-20 flex items-center justify-center md:h-20 md:w-24 
     }
 }

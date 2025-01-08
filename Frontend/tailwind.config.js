@@ -18,7 +18,10 @@ export default {
         'azul-parrafo':'#0F172A',
         'gray-title-min': '#555555',
         'azul-line':'#4555BC'
-      }
+      },
+      screens: {
+        'xs': '480px',
+      },
 
     },
   },
