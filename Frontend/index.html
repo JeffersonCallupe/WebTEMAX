@@ -21,7 +21,7 @@
     <!-- HEADER -->
     <nav
       x-data="{ isOpen: false }"
-      class="relative z-50 w-full h-10 bg-black shadow xs:h-12"
+      class= "relative z-50 w-full h-10 shadow bg-gradient-to-b from-black/100 via-black/100 to-black/100 xs:h-12 md:bg-gradient-to-b md:from-black/100 md:via-black/50 md:to-black/0 md:absolute"
     >
       <section
         class="h-full px-6 py-2 mx-auto md:flex md:items-center md:justify-between "
@@ -87,7 +87,7 @@
           class="absolute inset-x-0 z-20 w-full transition-all duration-300 ease-in-out md:relative md:top-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:opacity-100"
         >
           <section
-            class="flex flex-col px-6 text-center bg-black md:mx-6 md:flex-row "
+            class="flex flex-col px-6 text-center bg-black md:mx-6 md:flex-row md:bg-transparent"
           >
             <a
               class="my-4 transition-colors duration-300 transform text-white/70 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0   md:text-[17px]"
@@ -117,7 +117,7 @@
     <!-- CAROUSEL -->
     <section
       id="default-carousel"
-      class="relative w-full portada h-96 md:h-[500px]"
+      class="relative w-full portada h-96 md:h-[500px] "
       data-carousel=" "
     >
       <!-- Carousel wrapper -->
@@ -289,7 +289,7 @@
     </section>
 
     <!-- MARCAS -->
-    <section class="container mx-auto mt-5 flex w-[90%] flex-col xs:mt-24  sm:mt-12">
+    <section class="container mx-auto mt-5 flex w-[90%] flex-col xs:mt-24  sm:mt-12  ">
       <section>
         <h4 class="text-lg font-black text-center text-gray-title-min">
           Marcas que respaldan nuestro compromiso
@@ -742,7 +742,6 @@
     </section>
 
     <!-- INFORMACIÓN FINAL  -->
-
     <figure class="relative mt-5 h-72 xs:mt-9 md:h-[350px]">
       <img
         src="./public/img/soldador/soldador5.webp"
