@@ -6,10 +6,10 @@
 
 @layer components{
     .imgMarca{
-        @apply  object-center bg-cover 
+        @apply  object-center bg-cover  mx-auto
     }
     .marcaContainer{
-        @apply h-16 w-20 flex items-center justify-center sm:h-24 sm:w-[100px] md:h-24  md:w-[100px] md:mr-9
+        @apply h-16 w-20 flex items-center justify-center sm:h-24 sm:w-[100px] md:h-24  md:w-[100px] md:mr-9 2xl:h-28 2xl:w-32
     }
     .marcaContainerCliente{
         @apply h-16 w-20 flex items-center justify-center sm:h-24 sm:w-[100px] md:h-24  md:w-[100px] md:mr-9

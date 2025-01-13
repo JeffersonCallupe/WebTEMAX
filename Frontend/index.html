@@ -21,15 +21,15 @@
     <!-- HEADER -->
     <nav
       x-data="{ isOpen: false }"
-      class= "relative z-50 w-full h-10 shadow bg-gradient-to-b from-black/100 via-black/100 to-black/100 xs:h-12 md:bg-gradient-to-b md:from-black/100 md:via-black/50 md:to-black/0 md:absolute"
+      class= "relative z-50 w-full h-10 shadow bg-gradient-to-b from-black/100 via-black/100 to-black/100 xs:h-12 md:bg-gradient-to-b md:from-black/100 md:via-black/60 md:to-black/0 md:absolute lg:pt-4 2xl:px-5"
     >
       <section
-        class="h-full px-6 py-2 mx-auto md:flex md:items-center md:justify-between "
+        class="h-full px-6 py-2 mx-auto  md:flex md:items-center md:justify-between max-w-[1600px]"
       >
         <section class="flex items-center justify-between">
           <a href="#">
             <img
-              class="w-auto h-6 xs:h-9 sm:h-10 sm:w-auto"
+              class="w-auto h-6 xs:h-9 sm:h-10 sm:w-auto 2xl:h-14"
               src="./public//img/logoTemax.png"
               alt="logo-Temax"
               loading="lazy"
@@ -87,25 +87,25 @@
           class="absolute inset-x-0 z-20 w-full transition-all duration-300 ease-in-out md:relative md:top-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:opacity-100"
         >
           <section
-            class="flex flex-col px-6 text-center bg-black md:mx-6 md:flex-row md:bg-transparent"
+            class="flex flex-col px-6 text-center bg-black md:mx-6 md:flex-row md:bg-transparent 2xl:gap-14 xl:gap-5"
           >
             <a
-              class="my-4 transition-colors duration-300 transform text-white/70 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0   md:text-[17px]"
+              class="my-4 transition-colors duration-300 transform text-white/70 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0 md:text-[17px] xl:text-lg "
               href="#"
               >Inicio</a
             >
             <a
-              class="my-4 transition-colors duration-300 transform text-white/70 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0  md:text-[17px]"
+              class="my-4 transition-colors duration-300 transform text-white/70 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0  md:text-[17px] xl:text-lg"
               href="./src/pages/productos.html"
               >Produtos</a
             >
             <a
-              class="my-4 transition-colors duration-300 transform text-white/70 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0  md:text-[17px]"
+              class="my-4 transition-colors duration-300 transform text-white/70 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0  md:text-[17px] xl:text-lg"
               href="#"
               >Nosotros</a
             >
             <a
-              class="my-4 transition-colors duration-300 transform text-white/70 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0  md:text-[17px]"
+              class="my-4 transition-colors duration-300 transform text-white/70 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0  md:text-[17px] xl:text-lg"
               href="#"
               >Contacto</a
             >
@@ -117,11 +117,11 @@
     <!-- CAROUSEL -->
     <section
       id="default-carousel"
-      class="relative w-full portada h-96 md:h-[500px] "
+      class="relative w-full portada h-96 md:h-[500px] lg:h-[600px] max-h-[700px] "
       data-carousel=" "
     >
       <!-- Carousel wrapper -->
-      <section class="relative h-96 overflow-hidden xs:h-[450px] md:h-full">
+      <section class="relative h-96 overflow-hidden xs:h-[450px] md:h-full ">
         <!-- Item 1 -->
         <section class="hidden duration-700 ease-in-out" data-carousel-item>
           <img
@@ -132,39 +132,39 @@
           />
 
           <section
-            class="absolute flex items-center justify-center w-full h-full text-center"
+            class="absolute flex items-center justify-center w-full h-full text-center lg:text-left "
           >
-            <section class="flex w-[60%] flex-col gap-3 xs:w-[75%] xs:gap-6">
+            <section class="flex w-[60%] flex-col gap-3 xs:w-[75%] xs:gap-6 ">
               <section>
                 <p
-                  class="text-xs font-lato text-white/80 xs:text-base sm:text-lg"
+                  class="text-xs font-lato text-white/80 xs:text-base sm:text-lg 2xl:text-xl"
                 >
                   Potencia y precisión aseguradas
                 </p>
                 <h1
-                  class="text-xl font-black font-montserrat text-white/80 xs:text-3xl sm:text-4xl"
+                  class="text-xl font-black font-montserrat text-white/80 xs:text-3xl sm:text-4xl 2xl:text-5xl"
                 >
                   LLEVA TUS PROYECTO AL
                   <span class="text-[#70DFF0]">SIGUIENTE NIVEL CON TEMAX</span>
                 </h1>
                 <p
-                  class="text-sm font-medium font-actor text-white/80 xs:text-xl"
+                  class="text-sm font-medium font-actor text-white/80 xs:text-xl 2xl:text-2xl"
                 >
                   Equipos y consumibles de soldadura de máxima calidad para
-                  resultados impecables. Tu éxito es nuestra prioridad
+                  resultados impecables. <p class="text-sm font-medium font-actor text-white/80 xs:text-xl 2xl:text-2xl">Tu éxito es nuestra prioridad</p>
                 </p>
               </section>
               <section
-                class="flex flex-wrap items-center justify-center gap-3 xs:gap-5 sm:gap-9"
+                class="flex flex-wrap items-center justify-center gap-3 xs:gap-5 sm:gap-9 lg:justify-start lg:gap-5"
               >
                 <a
-                  class="btn__portada block w-48 bg-[#70DFF0] p-2 text-center font-roboto text-sm font-medium text-black hover:bg-[#1388a7] xs:text-lg"
+                  class="btn__portada block w-48 bg-[#70DFF0] p-2 text-center font-roboto text-sm font-medium text-black hover:bg-[#1388a7] xs:text-lg 2xl:text-2xl 2xl:py-4 2xl:px-6  2xl:w-60 "
                   href="#"
                   >Ver productos</a
                 >
 
                 <a
-                  class="btn__portada block w-48 border-2 border-[#129EB9] bg-transparent p-2 text-center font-roboto text-sm font-medium text-white xs:text-lg"
+                  class="btn__portada block w-48 border-2 border-[#129EB9] bg-transparent p-2 text-center font-roboto text-sm font-light text-white xs:text-lg 2xl:text-2xl 2xl:py-4 2xl:px-6  2xl:w-60  "
                   href="#"
                   >Contáctanos</a
                 >
@@ -183,26 +183,26 @@
           />
 
           <section
-            class="absolute flex items-center justify-center w-full h-full text-center"
+            class="absolute flex items-center justify-center w-full h-full text-center lg:text-left"
           >
-            <section class="flex w-[60%] flex-col gap-5">
+            <section class="flex w-[60%] flex-col gap-5 lg:w-[70%]">
               <section>
                 <h1
-                  class="mb-1 text-xl font-black font-montserrat text-white/90 xs:text-3xl sm:text-4xl"
+                  class="mb-1 text-xl font-black font-montserrat text-white/90 xs:text-3xl sm:text-4xl 2xl:text-5xl"
                 >
                   SOLUCIONES QUE MARCAN LA DIFERENCIA
                 </h1>
-                <p class="mb-2 font-actor text-base text-[#C2B059] xs:text-xl">
+                <p class="mb-2 font-actor text-base text-[#C2B059] xs:text-xl 2xl:text-3xl">
                   Equipos diseñados para el rendimiento óptimo en cualquier
                   entorno industrial
                 </p>
-                <p class="text-sm text-white font-lato xs:text-lg">
+                <p class="text-sm text-white font-lato xs:text-lg 2xl:text-2xl">
                   Mayor durabilidad, precisión y eficiencia en cada trabajo
                 </p>
               </section>
-              <section class="flex flex-wrap items-center justify-center gap-2">
+              <section class="flex flex-wrap items-center justify-center gap-2 lg:justify-start">
                 <a
-                  class="btn__portada border-3 block w-48 border-[#716829] bg-[#716829] p-2 text-center font-roboto text-sm font-medium text-white xs:text-lg"
+                  class="btn__portada border-3 block w-48 border-[#716829] bg-[#716829] p-2 text-center font-roboto text-sm font-medium text-white xs:text-lg 2xl:py-4 2xl:px-6  2xl:w-60 2xl:text-2xl "
                   href="#"
                   >Cotiza ahora</a
                 >
@@ -214,18 +214,18 @@
 
       <!-- Slider indicators -->
       <section
-        class="absolute left-1/2 z-30 mb-2 flex -translate-x-1/2 space-x-3 xs:top-[430px] sm:top-[420px] md:top-[470px]  rtl:space-x-reverse"
+        class="absolute left-1/2 z-30 mb-2 flex -translate-x-1/2 space-x-3 xs:top-[430px] sm:top-[420px] md:top-[470px]  rtl:space-x-reverse lg:top-[570px]"
       >
         <button
           type="button"
-          class="w-2 h-2 rounded-full xs:h-[10px] xs:w-[10px]"
+          class="w-2 h-2 rounded-full xs:h-[10px] xs:w-[10px] 2xl:h-4 2xl:w-4"
           aria-current="true"
           aria-label="Slide 1"
           data-carousel-slide-to="0"
         ></button>
         <button
           type="button"
-          class="w-2 h-2 rounded-full xs:h-[10px] xs:w-[10px]"
+          class="w-2 h-2 rounded-full xs:h-[10px] xs:w-[10px] 2xl:h-4 2xl:w-4"
           aria-current="false"
           aria-label="Slide 2"
           data-carousel-slide-to="1"
@@ -235,14 +235,14 @@
       <!-- Slider controls -->
       <button
         type="button"
-        class="group absolute start-0 top-0 z-30 flex h-96 cursor-pointer items-center justify-center px-2 focus:outline-none xs:h-[500px]"
+        class="group absolute start-0 top-0 z-30 flex h-96 cursor-pointer items-center justify-center px-2 focus:outline-none xs:h-[500px] lg:h-[640px]"
         data-carousel-prev
       >
         <span
-          class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none xs:h-9 xs:w-9 md:h-10 md:w-10"
+          class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none xs:h-9 xs:w-9 md:h-10 md:w-10 2xl:h-12 2xl:w-12"
         >
           <svg
-            class="w-2 h-2 text-black/65 xs:h-4 xs:w-4 rtl:rotate-180"
+            class="w-2 h-2 text-black/65 xs:h-4 xs:w-4 rtl:rotate-180 2xl:h-[20px] 2xl:w-[20px]"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -262,14 +262,14 @@
 
       <button
         type="button"
-        class="group absolute end-0 top-0 z-30 flex h-96 cursor-pointer items-center justify-center px-2 focus:outline-none xs:h-[500px]"
+        class="group absolute end-0 top-0 z-30 flex h-96 cursor-pointer items-center justify-center px-2 focus:outline-none xs:h-[500px] lg:h-[640px]"
         data-carousel-next
       >
         <span
-          class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none xs:h-9 xs:w-9 md:h-10 md:w-10"
+          class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:outline-none xs:h-9 xs:w-9 md:h-10 md:w-10 2xl:h-12 2xl:w-12"
         >
           <svg
-            class="w-2 h-2 text-black/65 xs:h-4 xs:w-4 rtl:rotate-180"
+            class="w-2 h-2 text-black/65 xs:h-4 xs:w-4 rtl:rotate-180 2xl:h-[20px] 2xl:w-[20px]"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -289,14 +289,14 @@
     </section>
 
     <!-- MARCAS -->
-    <section class="container mx-auto mt-5 flex w-[90%] flex-col xs:mt-24  sm:mt-12  ">
+    <section class="container mx-auto mt-5 flex w-[90%] flex-col xs:mt-24  sm:mt-12 max-w-[1600px]  ">
       <section>
-        <h4 class="text-lg font-black text-center text-gray-title-min">
+        <h4 class="text-lg font-black text-center text-gray-title-min 2xl:text-xl">
           Marcas que respaldan nuestro compromiso
         </h4>
       </section>
       <section
-        class="flex flex-wrap items-center justify-center gap-3 xs:gap-6 md:gap-3 "
+        class="flex flex-wrap items-center justify-center gap-3 xs:gap-6 md:gap-3 xl:gap-12 "
       >
         <figure class="marcaContainer">
           <img
@@ -366,16 +366,16 @@
     </section>
 
     <!-- PRIMER INFO : POTENCIA Y PRECISIÓN -->
-    <section class=" mx-auto mt-5 flex w-[90%] flex-col gap-7 xs:mt-9 md:flex-row-reverse md:w-[90%] sm:mt-12">
+    <section class=" mx-auto mt-5 flex w-[90%] flex-col gap-7 xs:mt-9 md:flex-row-reverse md:w-[90%] sm:mt-12 2xl:mt-16  max-w-[1600px]">
       <section class="flex flex-col md:w-[50%]">
         <aside><hr class="w-12 h-[6px] bg-azul-line" /></aside>
         <article>
           <h1
-            class="pt-2 font-roboto text-[28px] font-extrabold text-azul-oscuro-title md:text-4xl"
+            class="pt-2 font-roboto text-[28px] font-extrabold text-azul-oscuro-title md:text-4xl lg:text-5xl 2xl:text-[56px] 2xl:leading-snug xl:leading-tight"
           >
             Potencia y precisión en soldadura con Temax
           </h1>
-          <p class="pt-2 leading-7 font-roboto text-azul-parrafo md:leading-8">
+          <p class="pt-2 leading-7 font-roboto text-azul-parrafo md:leading-8 2xl:text-xl 2xl:leading-9">
             Descubre nuestros productos de alta calidad para cada proyecto de
             soldadura. Ofrecemos equipos y materiales diseñados para brindar
             resistencia, eficiencia y seguridad en cada aplicación. Lleva tus
@@ -383,8 +383,8 @@
             ofrecer
           </p>
         </article>
-        <aside class="pt-3 cursor-pointer">
-          <a class="pr-2 font-roboto font-medium text-[#2563EB]" href="#"
+        <aside class="pt-3 cursor-pointer lg:pt-5 2xl:pt-6">
+          <a class="pr-2 font-roboto font-medium text-[#2563EB] 2xl:text-xl" href="#"
             >Contactar</a
           >
           <svg
@@ -407,7 +407,8 @@
 
       <!-- IMAGENES CON GRID -->
       <section
-        class="grid w-full grid-cols-12 gap-3 mt-2 h-80 grid-rows-11 xs:h-96 sm:h-[450px] md:w-[50%] md:h-[400px]"
+        class="grid w-full grid-cols-12 gap-3 mt-2 h-80 grid-rows-11 xs:h-96 sm:h-[450px] md:w-[50%] md:h-[400px] 
+        lg:h-[450px] 2xl:h-[500px]"
       >
         <figure class="col-[1/5] row-[3/12]">
           <img
@@ -439,21 +440,21 @@
     </section>
 
     <!-- SEGUNDA INFO: NUESTROS PRODUCTOS -->
-    <section class=" mx-auto mt-10 w-[90%] xs:mt-14 md:w-[90%]">
+    <section class=" mx-auto mt-10 w-[90%] xs:mt-14 md:w-[90%]  max-w-[1600px]">
       <aside class="flex flex-col md:flex-col-reverse md:items-center ">
         <aside>
           <hr class="w-12 h-[6px] bg-azul-line" />
         </aside>
         <aside>
           <h1
-            class="pt-2 font-roboto text-[28px] font-extrabold text-azul-oscuro-title md:mb-2"
+            class="pt-2 font-roboto leading-7 text-[28px] font-extrabold text-azul-oscuro-title md:mb-2 2xl:text-3xl"
           >
             Nuestros productos
           </h1>
         </aside>
       </aside>
       <section>
-        <p class="pt-2 leading-7 font-roboto text-azul-parrafo md:text-center md:pt-4">
+        <p class="pt-2 leading-7 font-roboto text-azul-parrafo md:text-center md:pt-4 2xl:text-xl 2xl:leading-9">
           Nuestra línea de productos incluye equipos y accesorios de soldadura
           de alta calidad, desde electrodos hasta sistemas de protección y
           herramientas especializadas. En Temax, aseguramos que cada pieza
@@ -464,11 +465,11 @@
     </section>
 
     <!-- CATEGORIAS -->
-    <section class="container mx-auto mt-7 w-[90%]">
+    <section class="container mx-auto mt-7 w-[90%] 2xl:mt-10  max-w-[1600px]">
       <section
-        class="mt-2 grid h-[900px] w-full grid-cols-12 grid-rows-12 gap-5 md:h-[490px]"
+        class="mt-2 grid h-[900px] w-full grid-cols-12 grid-rows-12 gap-5 md:h-[490px] lg:gap-3"
       >
-        <figure class="relative col-[1/13] row-[1/4]  md:col-[1/7] md:row-[1/7]">
+        <figure class="relative col-[1/13] row-[1/4]  md:col-[1/7] md:row-[1/7]  lg:row-[1/13]">
           <img
             src="./img/categoria/materiales.webp"
             alt="Materiales de soldadura de alta calidad"
@@ -477,21 +478,21 @@
           />
 
           <aside
-            class="absolute inset-0 flex flex-col justify-center px-2 py-1 text-white bg-black/30"
+            class="absolute inset-0 flex flex-col justify-center px-2 py-1 text-white bg-black/30 lg:px-4 xl:px-10 "
           >
-            <h1 class="px-4 text-lg font-bold font-inter">
+            <h1 class="px-4 text-lg font-bold font-inter lg:text-5xl lg:leading-tight 2xl:text-6xl 2xl:leading-tight">
               Materiales de soldadura
             </h1>
             <p
-              class="mb-4 mt-1 px-4 font-inter text-xs font-extralight leading-5 xs:text-[15px] xs:leading-6"
+              class="mb-4 mt-1 px-4 font-inter text-xs font-extralight leading-5 xs:text-[15px] xs:leading-6 lg:text-lg lg:mt-3 lg:leading-8 2xl:text-xl 2xl:leading-relaxed"
             >
               Descubre nuestra gama de materiales de soldadura diseñados para
               ofrecer máxima calidad y precisión, garantizando uniones fuertes y
               duraderas en cada aplicación
             </p>
-            <aside class="px-4 xs:mt-1">
+            <aside class="px-4 xs:mt-1 lg:mt-6 ">
               <a
-                class="border border-white px-3 py-2 font-inter text-sm xs:text-[15px]"
+                class="border border-white px-3 py-2 font-inter text-sm xs:text-[15px] lg:px-8 lg:py-4 hover:bg-white hover:text-black hover:font-semibold 2xl:text-xl 2xl:px-10 2xl:py6"
                 href="#"
                 >Ver productos</a
               >
@@ -509,9 +510,9 @@
           <aside
             class="absolute inset-0 flex flex-col justify-center px-2 py-1 text-white bg-black/30"
           >
-            <h1 class="px-4 text-lg font-bold font-inter">Abrasivos sólidos</h1>
+            <h1 class="px-4 text-lg font-bold font-inter lg:text-3xl 2xl:text-4xl">Abrasivos sólidos</h1>
             <p
-              class="mb-4 mt-1 px-4 font-inter text-xs font-extralight leading-5 xs:text-[15px] xs:leading-6"
+              class="mb-4 mt-1 px-4 font-inter text-xs font-extralight leading-5 xs:text-[15px] xs:leading-6 xl:leading-7 2xl:text-lg"
             >
               Nuestros abrasivos sólidos ofrecen un rendimiento superior,
               proporcionando el desgaste necesario para trabajos de soldadura y
@@ -519,7 +520,7 @@
             </p>
             <aside class="px-4 xs:mt-1">
               <a
-                class="px-3 py-2 text-sm border border-white font-inter"
+                class="px-3 py-2 text-sm border border-white font-inter hover:bg-white hover:text-black hover:font-semibold lg:px-6 lg:py-3 2xl:px-8 2xl:text-lg"
                 href="#"
                 >Ver productos</a
               >
@@ -527,7 +528,7 @@
           </aside>
         </figure>
 
-        <figure class="relative col-[1/13] row-[7/10] md:col-[1/7] md:row-[7/13]">
+        <figure class="relative col-[1/13] row-[7/10] md:col-[1/7] md:row-[7/13] lg:col-[7/10] ">
           <img
             src="./img/categoria/accesorios.webp"
             alt="Accesorios de alta calidad"
@@ -537,16 +538,16 @@
           <aside
             class="absolute inset-0 flex flex-col justify-center px-2 py-1 text-white bg-black/30"
           >
-            <h1 class="px-4 text-lg font-bold font-inter">Accesorios</h1>
+            <h1 class="px-4 text-lg font-bold font-inter lg:text-2xl 2xl:text-4xl">Accesorios</h1>
             <p
-              class="mb-5 mt-1 px-4 font-inter text-xs font-extralight leading-5 xs:text-[15px] xs:leading-6"
+              class="mb-5 mt-1 px-4 font-inter text-xs font-extralight leading-5 xs:text-[15px] xs:leading-6  lg:text-sm lg:leading-[18px]  xl:leading-6 2xl:text-base" 
             >
               Herramientas esenciales para un trabajo de soldadura preciso y
               seguro. Potencia tus proyectos y asegura resultados de calidad
             </p>
-            <aside class="px-4 xs:mt-1">
+            <aside class="px-4 xs:mt-1 ">
               <a
-                class="px-3 py-2 text-sm border border-white font-inter"
+                class="px-3 py-2 text-sm border border-white font-inter hover:bg-white hover:text-black hover:font-semibold lg:px-5 lg:py-3 2xl:text-base"  
                 href="#"
                 >Ver productos</a
               >
@@ -554,7 +555,7 @@
           </aside>
         </figure>
 
-        <figure class="relative col-[1/13] row-[10/13] md:col-[7/13] md:row-[7/13]">
+        <figure class="relative col-[1/13] row-[10/13] md:col-[7/13] md:row-[7/13] lg:col-[10/13]">
           <img
             src="./img/categoria/siliconas.webp"
             alt="Siliconas de alta calidad"
@@ -564,16 +565,16 @@
           <aside
             class="absolute inset-0 flex flex-col justify-center px-2 py-1 text-white bg-black/30"
           >
-            <h1 class="px-4 text-lg font-bold font-inter">Siliconas</h1>
+            <h1 class="px-4 text-lg font-bold font-inter lg:text-2xl 2xl:text-4xl">Siliconas</h1>
             <p
-              class="mb-5 mt-1 px-4 font-inter text-xs font-extralight leading-5 xs:text-[15px] xs:leading-6"
+              class="mb-5 mt-1 px-4 font-inter text-xs font-extralight leading-5 xs:text-[15px] xs:leading-6 lg:text-sm lg:leading-[18px] xl:leading-6 2xl:text-base" 
             >
               Protección y durabilidad en cada aplicación. Silicones de alto
               rendimiento que aseguran un sellado perfecto
             </p>
-            <aside class="px-4 xs:mt-1">
+            <aside class="px-4 xs:mt-1 lg:mt-4 xl:mt-1">
               <a
-                class="px-3 py-2 text-sm border border-white font-inter"
+                class="px-3 py-2 text-sm border border-white font-inter hover:bg-white hover:text-black hover:font-semibold lg:px-5 lg:py-3 2xl:text-base"
                 href="#"
                 >Ver productos</a
               >
@@ -586,23 +587,23 @@
     <!-- POR QUÉ ELEGIRNOS -->
 
     <section
-      class="mt-7 w-full flex-col  bg-[#F1F5FF] md:mt-14 "
+      class="mt-7 w-full flex-col  bg-[#F1F5FF] md:mt-14  "
     >
-      <section class="mx-auto flex flex-col gap-11 w-[90%] px-4 pb-5 pt-3 font-roboto md:py-10 md:gap-9 ">
-        <section class="flex flex-col ">
+      <section class="mx-auto flex flex-col gap-11 w-[90%] px-4 pb-5 pt-3 font-roboto md:py-10 md:gap-9 lg:flex-row  lg:px-0 lg:gap-5  max-w-[1600px]">
+        <section class="flex flex-col  lg:w-[65%] ">
           <section>
-            <h1 class="text-[28px] font-extrabold text-azul-oscuro-title">
+            <h1 class="text-[28px] font-extrabold text-azul-oscuro-title 2xl:text-3xl">
               ¿Por qué elegirnos?
             </h1>
-            <p class="pt-2 leading-7 text-azul-parrafo m">
+            <p class="pt-2 leading-7 text-azul-parrafo 2xl:text-xl">
               En Temax, nos esforzamos por ser tu socio de confianza en soldadura
               industrial, ofreciendo beneficios únicos que nos diferencian:
             </p>
           </section>
   
-          <section class="flex flex-wrap justify-start gap-8 my-5 md:justify-center">
+          <section class="flex flex-wrap justify-start gap-8 my-5 md:justify-center lg:justify-start lg:gap-2 xl:gap-5">
             
-            <section class="flex flex-col w-full md:min-w-72 md:max-w-[350px]">
+            <section class="flex flex-col w-full md:w-72 lg:w-[280px] xl:w-[360px]  2xl:w-[435px]">
               <figure class="mt-3">
                 <img
                   src="./public/img/Iconos/soldador.webp"
@@ -611,10 +612,10 @@
                 />
               </figure>
               <section>
-                <h2 class="mt-2 text-lg font-bold text-azul-parrafo">
+                <h2 class="mt-2 text-lg font-bold text-azul-parrafo 2xl:text-xl">
                   Soluciones de soldadura completas
                 </h2>
-                <p class="leading-7 text-azul-parrafo">
+                <p class="leading-7 text-azul-parrafo 2xl:text-lg">
                   Ofrecemos una gama completa de productos de soldadura, desde
                   electrodos hasta equipos de última generación, para cubrir todas
                   tus necesidades
@@ -622,7 +623,7 @@
               </section>
             </section>
   
-            <section class="flex flex-col w-full md:min-w-72 md:max-w-[350px]  ">
+            <section class="flex flex-col w-full md:w-72 lg:w-[280px] xl:w-[360px]  2xl:w-[435px]">
               <figure class="mt-3">
                 <img
                   src="./public/img/Iconos/importacion.webp"
@@ -631,17 +632,17 @@
                 />
               </figure>
               <section>
-                <h2 class="mt-2 text-lg font-bold text-azul-parrafo">
+                <h2 class="mt-2 text-lg font-bold text-azul-parrafo 2xl:text-xl">
                   Importación directa para los mejores precios
                 </h2>
-                <p class="leading-7 text-azul-parrafo">
+                <p class="leading-7 text-azul-parrafo 2xl:text-lg">
                   Adaptamos nuestros servicios para aumentar tu eficiencia,
                   reducir costos y mejorar tus resultados
                 </p>
               </section>
             </section>
   
-            <section class="flex flex-col w-full md:min-w-72 md:max-w-[350px]">
+            <section class="flex flex-col w-full md:w-72 lg:w-[280px] xl:w-[360px]  2xl:w-[435px]">
               <figure class="mt-3">
                 <img
                   src="./public/img/Iconos/contacto.webp"
@@ -650,10 +651,10 @@
                 />
               </figure>
               <section>
-                <h2 class="mt-2 text-lg font-bold text-azul-parrafo">
+                <h2 class="mt-2 text-lg font-bold text-azul-parrafo 2xl:text-xl">
                   Asesoría experta y soporte técnico
                 </h2>
-                <p class="leading-7 text-azul-parrafo">
+                <p class="leading-7 text-azul-parrafo lg:pr-4 2xl:text-lg">
                   Nuestro equipo de expertos te brindará asesoramiento
                   personalizado para ayudarte a elegir los productos adecuados
                   para tu proyecto.
@@ -661,7 +662,7 @@
               </section>
             </section>
   
-            <section class="flex flex-col w-full md:min-w-72 md:max-w-[350px]">
+            <section class="flex flex-col w-full md:w-72 lg:w-[280px] xl:w-[360px] 2xl:w-[435px] ">
               <figure class="mt-3">
                 <img
                   src="./public/img/Iconos/delivery.webp"
@@ -670,10 +671,10 @@
                 />
               </figure>
               <section>
-                <h2 class="mt-2 text-lg font-bold text-azul-parrafo">
+                <h2 class="mt-2 text-lg font-bold text-azul-parrafo 2xl:text-xl">
                   Entrega rápida y confiable
                 </h2>
-                <p class="leading-7 text-azul-parrafo">
+                <p class="leading-7 text-azul-parrafo 2xl:text-lg">
                   Tenemos lo que necesitas, cuando lo necesitas! Amplio stock y
                   entregas garantizadas que superan tus expectativa
                 </p>
@@ -683,12 +684,14 @@
             
           </section>
         </section>
-        <figure class="mx-auto h-72 xs:h-[390px] xs:w-auto">
-          <img
+        <figure class="mx-auto lg:flex lg:items-center">
+            <figure class="h-72 xs:h-[390px] xs:w-auto lg:h-[450px] xl:h-[500px] 2xl:h-[550px] ">
+              <img
             class="w-auto h-full"
             src="./public/img/soldador/soldador4.webp"
             alt="soldador"
           />
+            </figure>
         </figure>
         
       </section>
@@ -697,14 +700,14 @@
     </section>
 
     <!-- NUESTROS CLIENTES -->
-    <section class=" mx-auto mt-5 flex w-[90%] flex-col xs:mt-8">
+    <section class=" mx-auto mt-5 flex w-[90%] flex-col xs:mt-8  max-w-[1600px]">
       <section>
-        <h4 class="text-lg font-black text-center text-gray-title-min">
+        <h4 class="text-lg font-black text-center text-gray-title-min 2xl:text-xl">
           Nuestros clientes
         </h4>
       </section>
       <section
-        class="flex flex-wrap items-center justify-center mt-5 gap-7 xs:gap-9 sm:gap-20 md:gap-10"
+        class="flex flex-wrap items-center justify-center mt-5 gap-7 xs:gap-9 sm:gap-20 md:gap-10 lg:gap-16 xl:gap-24"
       >
         <figure class="marcaContainerCliente">
           <img
@@ -742,7 +745,7 @@
     </section>
 
     <!-- INFORMACIÓN FINAL  -->
-    <figure class="relative mt-5 h-72 xs:mt-9 md:h-[350px]">
+    <figure class="relative mt-5 h-72 xs:mt-9 md:h-[350px] ">
       <img
         src="./public/img/soldador/soldador5.webp"
         alt="Materiales de soldadura de alta calidad"
@@ -751,25 +754,25 @@
       />
 
       <aside
-        class="absolute inset-0 flex flex-col justify-center px-1 py-1 text-center text-white gap-7 bg-black/10 font-montserrat"
+        class="absolute inset-0 flex flex-col justify-center px-1 py-1 text-center text-white gap-7 bg-black/10 font-montserrat "
       >
         <section>
-          <h1 class="px-4 text-lg font-bold xs:text-2xl">
+          <h1 class="px-4 text-lg font-bold xs:text-2xl lg:text-3xl 2xl:text-4xl">
             CONSTRUYE CON CONFIANZA
           </h1>
-          <p class="px-4 mt-1 text-sm leading-5 font-extralight xs:text-base">
+          <p class="px-4 mt-1 text-sm leading-5 font-extralight xs:text-base 2xl:text-xl">
             Descubre por qué nuestros clientes confían en nosotros para sus
             proyectos más ambiciosos
           </p>
         </section>
         <aside class="px-4">
           <a
-            class="rounded-md bg-[#FA4A0C] px-6 py-3 text-sm xs:text-base"
+            class="rounded-md bg-[#FA4A0C] px-6 py-3 text-sm xs:text-base lg:px-8 lg:py-4 2xl:text-xl 2xl:px-12 2xl:py-5 hover:bg-[#eb370b]"
             href="#"
             >Contactar</a
           >
           <a
-            class="px-3 py-3 ml-5 text-sm border border-white rounded-md xs:text-base"
+            class="px-3 py-3 ml-5 text-sm border border-white rounded-md xs:text-base lg:px-5 lg:py-4 2xl:text-xl 2xl:px-7 2xl:py-5"
             href="#"
             >Ver productos</a
           >
@@ -779,10 +782,10 @@
 
     <!-- FOOTER -->
 
-    <footer class="bg-[#001F3F] font-lato text-white">
+    <footer class="bg-[#001F3F] font-lato text-white ">
       <div class="container flex flex-col p-6 mx-auto text-center">
-        <div class="flex flex-col items-center md:flex-">
-          <div class="flex justify-center w-full -mx-6 lg:w-2/5">
+        <div class="flex flex-col items-center lg:flex-row lg:mt-7">
+          <div class="flex justify-center w-full -mx-6 lg:w-2/5 ">
             <div class="px-6">
               <section class="flex justify-center">
                 <a class="text-center" href="#">
@@ -794,7 +797,7 @@
                 </a>
               </section>
 
-              <p class="max-w-sm mt-2">
+              <p class="max-w-sm mt-2 2xl:text-xl">
                 Donde la calidad se forja y la confianza se construye con cada
                 producto
               </p>
@@ -835,7 +838,7 @@
 
           <div class="mt-6 lg:mt-0 lg:flex-1 sm:mt-10">
             <div
-              class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 sm:gap-10 "
+              class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 sm:gap-10 2xl:text-lg "
             >
               <div>
                 <h3 class="font-semibold uppercase">About</h3>
@@ -858,7 +861,7 @@
                   >Videos</a
                 >
               </div>
-
+              
               <div>
                 <h3 class="font-semibold uppercase">Products</h3>
                 <a href="#" class="block mt-2 text-sm hover:underline"
@@ -871,7 +874,6 @@
                   >Meraki UI</a
                 >
               </div>
-
               <div>
                 <h3 class="font-semibold uppercase">Contact</h3>
                 <span class="block mt-2 text-sm hover:underline"
@@ -882,12 +884,11 @@
                 >
               </div>
             </div>
-          </div>
-          
+          </div>         
         </div>
 
-       <section>
-        <hr class="h-px my-6 bg-gray-200 border-none" />
+       <section class="lg:mt-7">
+        <hr class="h-px my-6 bg-gray-200 border-none " />
         <div>
           <p class="text-center">©Temax - Todos los derechos reservados</p>
         </div>
