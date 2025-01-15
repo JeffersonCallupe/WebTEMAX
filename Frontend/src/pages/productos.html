@@ -1,11 +1,1461 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div> Productos</div>
-</body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/img/logoTemax.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../src/styles/productos.css" />
+    <script
+      src="https://kit.fontawesome.com/efcdc368ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <nav
+      x-data="{ isOpen: false }"
+      class="relative z-50 w-full h-10 shadow bg-gradient-to-b from-black/100 via-black/100 to-black/100 xs:h-12 md:absolute md:bg-gradient-to-b md:from-black/100 md:via-black/60 md:to-black/0 lg:pt-4 2xl:px-5"
+    >
+      <section
+        class="mx-auto h-full max-w-[1600px] px-6 py-2 md:flex md:items-center md:justify-between"
+      >
+        <section class="flex items-center justify-between">
+          <a href="#">
+            <img
+              class="w-auto h-6 xs:h-9 sm:h-10 sm:w-auto 2xl:h-14"
+              src="../../public/img/logoTemax.png"
+              alt="logo-Temax"
+              loading="lazy"
+            />
+          </a>
+
+          <!-- Mobile menu button -->
+          <section class="flex lg:hidden">
+            <button
+              x-cloak
+              @click="isOpen = !isOpen"
+              type="button"
+              class="text-white/80 md:invisible hover:text-gray-600 focus:text-white/90 focus:outline-none"
+              aria-label="toggle menu"
+            >
+              <svg
+                x-show="!isOpen"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 xs:h-8 xs:w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 8h16M4 16h16"
+                />
+              </svg>
+
+              <svg
+                x-show="isOpen"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 xs:h-8 xs:w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </section>
+        </section>
+
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <section
+          x-cloak
+          :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
+          class="absolute inset-x-0 z-20 w-full transition-all duration-300 ease-in-out md:relative md:top-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:opacity-100"
+        >
+          <section
+            class="flex flex-col px-6 text-center bg-black md:mx-6 md:flex-row md:bg-transparent xl:gap-5 2xl:gap-14"
+          >
+            <a
+              class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0 md:text-[17px] xl:text-lg"
+              href="../../index.html"
+              >Inicio</a
+            >
+            <a
+              class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0 md:text-[17px] xl:text-lg"
+              href="./src/pages/productos.html"
+              >Produtos</a
+            >
+            <a
+              class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0 md:text-[17px] xl:text-lg"
+              href="./nosotros.html"
+              >Nosotros</a
+            >
+            <a
+              class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0 md:text-[17px] xl:text-lg"
+              href="#"
+              >Contacto</a
+            >
+          </section>
+        </section>
+      </section>
+    </nav>
+
+    <!-- PORTADA -->
+    <section class="relative h-96 max-h-[700px] w-full bg-red-200 md:h-[500px]   ">
+      <img
+        class="absolute object-cover w-full h-full lg:bg-fixed "
+        src="../../public/img/soldador/maquina.webp"
+        alt="maquina"
+        loading="lazy"
+      />
+
+      <!-- TÍTULO  -->
+      <section
+        class="absolute flex flex-row items-center justify-center w-full h-full gap-4 text-left"
+      >
+        <aside><hr class="h-28 w-2 bg-[#339BE2]" /></aside>
+
+        <section class="flex w-[60%] flex-col gap-3 xs:w-[75%] xs:gap-6">
+          <section>
+            <h1
+              class="text-2xl font-black font-montserrat text-white/80 xs:text-3xl sm:text-4xl lg:text-5xl 2xl:text-5xl"
+            >
+              NUESTROS PRODUCTOS
+            </h1>
+            <p
+              class="text-sm font-medium font-actor text-white/80 xs:text-base md:text-lg lg:text-xl 2xl:text-2xl"
+            >
+              Nuestra línea de productos está diseñada para cumplir con los más
+              altos estándares de calidad en el sector de la soldadura
+            </p>
+          </section>
+        </section>
+      </section>
+
+      <!-- BUSCADOR  -->
+      <form
+        class="relative top-[300px] mx-auto xs:top-[310px] md:top-[425px] lg:top-[470px]"
+      >
+        <label
+          for="default-search"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only"
+          >Search</label
+        >
+        <div class="relative mx-auto w-72 xs:w-[380px] md:w-[500px]">
+          <div
+            class="absolute inset-y-0 flex items-center pointer-events-none start-0 ps-3"
+          >
+            <svg
+              class="w-4 h-4 text-gray-500"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <input
+            type="search"
+            id="default-search"
+            class="block w-full p-4 text-sm text-gray-900 border-none rounded-lg shadow-md bg-gray-50 ps-10 focus:border-blue-500 focus:ring-blue-500"
+            placeholder="Buscar producto"
+            required
+          />
+          <!-- <button type="submit" class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Buscar</button> -->
+        </div>
+      </form>
+    </section>
+
+    <!-- MARCAS  -->
+    <section
+      class="container mx-auto mt-8 flex w-[90%] max-w-[1600px] flex-col xs:mt-10 sm:mt-12"
+    >
+      <section
+        class="flex flex-wrap items-center justify-center gap-3 xs:gap-6 md:gap-3 xl:gap-12"
+      >
+        <figure class="marcaContainer">
+          <img
+            class="imgMarca"
+            src="../../public/img/marcas/arcair.webp"
+            alt="Arcair"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="marcaContainer">
+          <img
+            class="imgMarca"
+            src="../../public/img/marcas/klinsgspor.webp"
+            alt="klinsgspor"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="marcaContainer">
+          <img
+            class="imgMarca"
+            src="../../public/img/marcas/KNAUF.webp"
+            alt="Knauf"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="marcaContainer">
+          <img
+            class="imgMarca"
+            src="../../public/img/marcas/nazca-soldexa.webp"
+            alt="Nazca-soldexa"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="marcaContainer">
+          <img
+            class="imgMarca"
+            src="../../public/img/marcas/norton.png"
+            alt="Norton"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="marcaContainer">
+          <img
+            class="imgMarca"
+            src="../../public/img/marcas/soldexa.webp"
+            alt="Soldexa"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="marcaContainer">
+          <img
+            class="imgMarca"
+            src="../../public/img/marcas/thermal.webp"
+            alt="Thermal Dynamics"
+            loading="lazy"
+          />
+        </figure>
+        <figure class="marcaContainer">
+          <img
+            class="imgMarca"
+            src="../../public/img/marcas/victor.webp"
+            alt="Victor Technologies"
+            loading="lazy"
+          />
+        </figure>
+      </section>
+    </section>
+
+    <!-- CATEGORIAS    -->
+    <section class="mt-8 xs:mt-10">
+      <!-- TÍTULO -->
+      <section class="mx-auto w-[90%]">
+        <h2 class="font-roboto font-bold text-[#008ECC]">
+          Todas las categorías
+        </h2>
+        <aside>
+          <hr class="h-1 w-40 bg-[#008ECC]" />
+          <hr />
+        </aside>
+      </section>
+
+      <!-- CAROUSEL -->
+      <div class="relative flex items-center mt-4 lg:mt-6">
+        <!-- Contenedor del carrusel -->
+        <div
+          id="carousel"
+          class="no-scrollbar px- mx-auto flex w-[90%] gap-3 overflow-x-scroll scroll-smooth xs:gap-5 md:gap-14 lg:justify-center lg:gap-16"
+        >
+          <div class="min-w-[100px] text-center">
+            <img
+              src="../../public/img/categoria/abrasivos.webp"
+              alt="Soldadura"
+              class="mx-auto h-[80px] w-[80px] rounded-full border-4 border-[#008ECC] shadow-lg md:h-[90px] md:w-[90px]"
+            />
+            <p class="mt-2 text-sm font-medium text-gray-700">Soldadura</p>
+          </div>
+
+          <div class="min-w-[100px] text-center">
+            <img
+              src="../../public/img/categoria/accesorios.webp"
+              alt="Abrasivos sólidos"
+              class="mx-auto h-[80px] w-[80px] rounded-full border border-gray-300 shadow-md md:h-[90px] md:w-[90px]"
+            />
+            <p class="mt-2 text-sm font-medium text-gray-700">
+              Abrasivos sólidos
+            </p>
+          </div>
+
+          <div class="min-w-[100px] text-center">
+            <img
+              src="../../public/img/categoria/materiales.webp"
+              alt="Accesorios"
+              class="mx-auto h-[80px] w-[80px] rounded-full border border-gray-300 shadow-md md:h-[90px] md:w-[90px]"
+            />
+            <p class="mt-2 text-sm font-medium text-gray-700">Accesorios</p>
+          </div>
+
+          <div class="min-w-[100px] text-center">
+            <img
+              src="../../public/img/categoria/abrasivos.webp"
+              alt="Silicona"
+              class="mx-auto h-[80px] w-[80px] rounded-full border border-gray-300 shadow-md md:h-[90px] md:w-[90px]"
+            />
+            <p class="mt-2 text-sm font-medium text-gray-700">Silicona</p>
+          </div>
+          <!-- Agregar más categorías aquí -->
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="flex flex-col mt-8 xs:mt-10 lg:flex-row w-[90%] mx-auto">
+      <!-- SELECCIONAR MARCA  -->
+      <section
+        class="mx-auto mt-8 flex w-[90%] justify-center xs:mt-10 sm:justify-start  lg:w-[40%] "
+      >
+        <!-- SELECT -->
+        <!-- <form class="w-64 max-w-sm"> -->
+          <!-- <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 ">Selecciona categoría</label> -->
+          <!-- <select
+            id="countries"
+            class="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 font-roboto text-sm text-gray-700 focus:border-blue-500 focus:ring-blue-500"
+          > -->
+            <!-- aquí se añaden las marcas de acuerdo a la categoría  -->
+            <!-- <option selected>Seleccionar marca</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+          </select>
+        </form> -->
+
+        <!-- SEGUNDO TIPO DE SELECT -->
+    <section class="flex flex-col">
+        <section>
+            <h3 class="mb-4 text-xl font-bold text-gray-900">Marcas</h3>
+        </section>
+        <section>
+            <ul class="text-lg font-medium text-gray-900 bg-white border border-gray-200 rounded-lg w-60 font-roboto ">
+                <li class="w-full border-b border-gray-200 rounded-t-lg ">
+                    <div class="flex items-center ps-3">
+                        <input id="vue-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 ">
+                        <label for="vue-checkbox" class="w-full py-3 text-lg font-light text-[#404E62] ms-2">Vue JS</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg ">
+                    <div class="flex items-center ps-3">
+                        <input id="react-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 ">
+                        <label for="react-checkbox" class="w-full py-3 text-lg font-light text-[#404E62] ms-2">React</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg ">
+                    <div class="flex items-center ps-3">
+                        <input id="angular-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 ">
+                        <label for="angular-checkbox" class="w-full py-3 text-lg font-light text-[#404E62] ms-2">Angular</label>
+                    </div>
+                </li>
+                <li class="w-full border-b border-gray-200 rounded-t-lg ">
+                    <div class="flex items-center ps-3">
+                        <input id="laravel-checkbox" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 ">
+                        <label for="laravel-checkbox" class="w-full py-3 text-lg font-light text-[#404E62] ms-2">Laravel</label>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </section>
+
+        
+
+      </section>
+
+      <!-- VENTANA DE PRODUCTOS -->
+      <section>
+        <!-- CARDS  -->
+        <section
+          class="mx-auto mt-8 flex w-[90%] flex-wrap items-center justify-center gap-12 xs:mt-10"
+        >
+          <div
+            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow h-96 w-60"
+          >
+            <figure class="w-full h-40">
+              <img
+                class="object-cover w-full h-full rounded-t-lg"
+                src="../../public/img/soldador/soldador3.webp"
+                alt="producto"
+                loading="lazy"
+              />
+            </figure>
+
+            <div class="p-3">
+              <section class="flex flex-col gap-2">
+                <section>
+                  <h5 class="font-roboto text-[15px] font-bold text-[#818181]">
+                    MARCA DEL PRODUCTO
+                  </h5>
+                  <h3
+                    class="text-lg font-extrabold tracking-tight text-gray-900 font-inter"
+                  >
+                    Noteworthy technology
+                  </h3>
+                </section>
+
+                <section>
+                  <p
+                    class="mb-3 line-clamp-4 font-roboto text-[15px] font-normal text-[#292929]"
+                  >
+                    Here are the biggest enterprise technology acquisitions of
+                    2021 so far, in reverse chronological
+                    orderadfasfsadfaaaaaloeieyhtndjsdfksdñkfasdkfasdkfba
+                    dfkajsdfkasdfaskdfhuhdfhdsahfasdfsdajhfkjasdhfkjsdahkfjhasdkfhasdkjf
+                  </p>
+                </section>
+              </section>
+
+              <!-- MODAL  -->
+              <section>
+                <!-- Modal toggle -->
+                <button
+                  data-modal-target="default-modal"
+                  data-modal-toggle="default-modal"
+                  class="block w-full rounded-lg bg-[#156EB4] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                  type="button"
+                >
+                  Ver poroducto
+                </button>
+
+                <!-- Main modal -->
+                <div
+                  id="default-modal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                  class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
+                >
+                  <div class="relative w-full max-w-2xl max-h-full p-4">
+                    <!-- Modal content -->
+                    <div
+                      class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                    >
+                      <!-- Modal header -->
+                      <div
+                        class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600 md:p-5"
+                      >
+                        <h3
+                          class="text-xl font-semibold text-gray-900 dark:text-white"
+                        >
+                          Terms of Service
+                        </h3>
+                        <button
+                          type="button"
+                          class="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg ms-auto hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+                          data-modal-hide="default-modal"
+                        >
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 14"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                            />
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                        </button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="p-4 space-y-4 md:p-5">
+                        <p
+                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                        >
+                          With less than a month to go before the European Union
+                          enacts new consumer privacy laws for its citizens,
+                          companies around the world are updating their terms of
+                          service agreements to comply.
+                        </p>
+                        <p
+                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                        >
+                          The European Union’s General Data Protection
+                          Regulation (G.D.P.R.) goes into effect on May 25 and
+                          is meant to ensure a common set of data rights in the
+                          European Union. It requires organizations to notify
+                          users as soon as possible of high-risk data breaches
+                          that could personally affect them.
+                        </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div
+                        class="flex items-center p-4 border-t border-gray-200 rounded-b dark:border-gray-600 md:p-5"
+                      >
+                        <button
+                          data-modal-hide="default-modal"
+                          type="button"
+                          class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        >
+                          I accept
+                        </button>
+                        <button
+                          data-modal-hide="default-modal"
+                          type="button"
+                          class="ms-3 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                        >
+                          Decline
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div
+            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow h-96 w-60"
+          >
+            <figure class="w-full h-40">
+              <img
+                class="object-cover w-full h-full rounded-t-lg"
+                src="../../public/img/soldador/soldador3.webp"
+                alt="producto"
+                loading="lazy"
+              />
+            </figure>
+
+            <div class="p-3">
+              <section class="flex flex-col gap-2">
+                <section>
+                  <h5 class="font-roboto text-[15px] font-bold text-[#818181]">
+                    MARCA DEL PRODUCTO
+                  </h5>
+                  <h3
+                    class="text-lg font-extrabold tracking-tight text-gray-900 font-inter"
+                  >
+                    Noteworthy technology
+                  </h3>
+                </section>
+
+                <section>
+                  <p
+                    class="mb-3 line-clamp-4 font-roboto text-[15px] font-normal text-[#292929]"
+                  >
+                    Here are the biggest enterprise technology acquisitions of
+                    2021 so far, in reverse chronological
+                    orderadfasfsadfaaaaaloeieyhtndjsdfksdñkfasdkfasdkfba
+                    dfkajsdfkasdfaskdfhuhdfhdsahfasdfsdajhfkjasdhfkjsdahkfjhasdkfhasdkjf
+                  </p>
+                </section>
+              </section>
+
+              <!-- MODAL  -->
+              <section>
+                <!-- Modal toggle -->
+                <button
+                  data-modal-target="default-modal"
+                  data-modal-toggle="default-modal"
+                  class="block w-full rounded-lg bg-[#156EB4] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                  type="button"
+                >
+                  Ver poroducto
+                </button>
+
+                <!-- Main modal -->
+                <div
+                  id="default-modal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                  class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
+                >
+                  <div class="relative w-full max-w-2xl max-h-full p-4">
+                    <!-- Modal content -->
+                    <div
+                      class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                    >
+                      <!-- Modal header -->
+                      <div
+                        class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600 md:p-5"
+                      >
+                        <h3
+                          class="text-xl font-semibold text-gray-900 dark:text-white"
+                        >
+                          Terms of Service
+                        </h3>
+                        <button
+                          type="button"
+                          class="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg ms-auto hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+                          data-modal-hide="default-modal"
+                        >
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 14"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                            />
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                        </button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="p-4 space-y-4 md:p-5">
+                        <p
+                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                        >
+                          With less than a month to go before the European Union
+                          enacts new consumer privacy laws for its citizens,
+                          companies around the world are updating their terms of
+                          service agreements to comply.
+                        </p>
+                        <p
+                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                        >
+                          The European Union’s General Data Protection
+                          Regulation (G.D.P.R.) goes into effect on May 25 and
+                          is meant to ensure a common set of data rights in the
+                          European Union. It requires organizations to notify
+                          users as soon as possible of high-risk data breaches
+                          that could personally affect them.
+                        </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div
+                        class="flex items-center p-4 border-t border-gray-200 rounded-b dark:border-gray-600 md:p-5"
+                      >
+                        <button
+                          data-modal-hide="default-modal"
+                          type="button"
+                          class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        >
+                          I accept
+                        </button>
+                        <button
+                          data-modal-hide="default-modal"
+                          type="button"
+                          class="ms-3 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                        >
+                          Decline
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div
+            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow h-96 w-60"
+          >
+            <figure class="w-full h-40">
+              <img
+                class="object-cover w-full h-full rounded-t-lg"
+                src="../../public/img/soldador/soldador3.webp"
+                alt="producto"
+                loading="lazy"
+              />
+            </figure>
+
+            <div class="p-3">
+              <section class="flex flex-col gap-2">
+                <section>
+                  <h5 class="font-roboto text-[15px] font-bold text-[#818181]">
+                    MARCA DEL PRODUCTO
+                  </h5>
+                  <h3
+                    class="text-lg font-extrabold tracking-tight text-gray-900 font-inter"
+                  >
+                    Noteworthy technology
+                  </h3>
+                </section>
+
+                <section>
+                  <p
+                    class="mb-3 line-clamp-4 font-roboto text-[15px] font-normal text-[#292929]"
+                  >
+                    Here are the biggest enterprise technology acquisitions of
+                    2021 so far, in reverse chronological
+                    orderadfasfsadfaaaaaloeieyhtndjsdfksdñkfasdkfasdkfba
+                    dfkajsdfkasdfaskdfhuhdfhdsahfasdfsdajhfkjasdhfkjsdahkfjhasdkfhasdkjf
+                  </p>
+                </section>
+              </section>
+
+              <!-- MODAL  -->
+              <section>
+                <!-- Modal toggle -->
+                <button
+                  data-modal-target="default-modal"
+                  data-modal-toggle="default-modal"
+                  class="block w-full rounded-lg bg-[#156EB4] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                  type="button"
+                >
+                  Ver poroducto
+                </button>
+
+                <!-- Main modal -->
+                <div
+                  id="default-modal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                  class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
+                >
+                  <div class="relative w-full max-w-2xl max-h-full p-4">
+                    <!-- Modal content -->
+                    <div
+                      class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                    >
+                      <!-- Modal header -->
+                      <div
+                        class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600 md:p-5"
+                      >
+                        <h3
+                          class="text-xl font-semibold text-gray-900 dark:text-white"
+                        >
+                          Terms of Service
+                        </h3>
+                        <button
+                          type="button"
+                          class="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg ms-auto hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+                          data-modal-hide="default-modal"
+                        >
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 14"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                            />
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                        </button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="p-4 space-y-4 md:p-5">
+                        <p
+                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                        >
+                          With less than a month to go before the European Union
+                          enacts new consumer privacy laws for its citizens,
+                          companies around the world are updating their terms of
+                          service agreements to comply.
+                        </p>
+                        <p
+                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                        >
+                          The European Union’s General Data Protection
+                          Regulation (G.D.P.R.) goes into effect on May 25 and
+                          is meant to ensure a common set of data rights in the
+                          European Union. It requires organizations to notify
+                          users as soon as possible of high-risk data breaches
+                          that could personally affect them.
+                        </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div
+                        class="flex items-center p-4 border-t border-gray-200 rounded-b dark:border-gray-600 md:p-5"
+                      >
+                        <button
+                          data-modal-hide="default-modal"
+                          type="button"
+                          class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        >
+                          I accept
+                        </button>
+                        <button
+                          data-modal-hide="default-modal"
+                          type="button"
+                          class="ms-3 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                        >
+                          Decline
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div
+            class="max-w-sm bg-white border border-gray-200 rounded-lg shadow h-96 w-60"
+          >
+            <figure class="w-full h-40">
+              <img
+                class="object-cover w-full h-full rounded-t-lg"
+                src="../../public/img/soldador/soldador3.webp"
+                alt="producto"
+                loading="lazy"
+              />
+            </figure>
+
+            <div class="p-3">
+              <section class="flex flex-col gap-2">
+                <section>
+                  <h5 class="font-roboto text-[15px] font-bold text-[#818181]">
+                    MARCA DEL PRODUCTO
+                  </h5>
+                  <h3
+                    class="text-lg font-extrabold tracking-tight text-gray-900 font-inter"
+                  >
+                    Noteworthy technology
+                  </h3>
+                </section>
+
+                <section>
+                  <p
+                    class="mb-3 line-clamp-4 font-roboto text-[15px] font-normal text-[#292929]"
+                  >
+                    Here are the biggest enterprise technology acquisitions of
+                    2021 so far, in reverse chronological
+                    orderadfasfsadfaaaaaloeieyhtndjsdfksdñkfasdkfasdkfba
+                    dfkajsdfkasdfaskdfhuhdfhdsahfasdfsdajhfkjasdhfkjsdahkfjhasdkfhasdkjf
+                  </p>
+                </section>
+              </section>
+
+              <!-- MODAL  -->
+              <section>
+                <!-- Modal toggle -->
+                <button
+                  data-modal-target="default-modal"
+                  data-modal-toggle="default-modal"
+                  class="block w-full rounded-lg bg-[#156EB4] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300"
+                  type="button"
+                >
+                  Ver poroducto
+                </button>
+
+                <!-- Main modal -->
+                <div
+                  id="default-modal"
+                  tabindex="-1"
+                  aria-hidden="true"
+                  class="fixed left-0 right-0 top-0 z-50 hidden h-[calc(100%-1rem)] max-h-full w-full items-center justify-center overflow-y-auto overflow-x-hidden md:inset-0"
+                >
+                  <div class="relative w-full max-w-2xl max-h-full p-4">
+                    <!-- Modal content -->
+                    <div
+                      class="relative bg-white rounded-lg shadow dark:bg-gray-700"
+                    >
+                      <!-- Modal header -->
+                      <div
+                        class="flex items-center justify-between p-4 border-b rounded-t dark:border-gray-600 md:p-5"
+                      >
+                        <h3
+                          class="text-xl font-semibold text-gray-900 dark:text-white"
+                        >
+                          Terms of Service
+                        </h3>
+                        <button
+                          type="button"
+                          class="inline-flex items-center justify-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg ms-auto hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+                          data-modal-hide="default-modal"
+                        >
+                          <svg
+                            class="w-3 h-3"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 14 14"
+                          >
+                            <path
+                              stroke="currentColor"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                            />
+                          </svg>
+                          <span class="sr-only">Close modal</span>
+                        </button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="p-4 space-y-4 md:p-5">
+                        <p
+                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                        >
+                          With less than a month to go before the European Union
+                          enacts new consumer privacy laws for its citizens,
+                          companies around the world are updating their terms of
+                          service agreements to comply.
+                        </p>
+                        <p
+                          class="text-base leading-relaxed text-gray-500 dark:text-gray-400"
+                        >
+                          The European Union’s General Data Protection
+                          Regulation (G.D.P.R.) goes into effect on May 25 and
+                          is meant to ensure a common set of data rights in the
+                          European Union. It requires organizations to notify
+                          users as soon as possible of high-risk data breaches
+                          that could personally affect them.
+                        </p>
+                      </div>
+                      <!-- Modal footer -->
+                      <div
+                        class="flex items-center p-4 border-t border-gray-200 rounded-b dark:border-gray-600 md:p-5"
+                      >
+                        <button
+                          data-modal-hide="default-modal"
+                          type="button"
+                          class="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        >
+                          I accept
+                        </button>
+                        <button
+                          data-modal-hide="default-modal"
+                          type="button"
+                          class="ms-3 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
+                        >
+                          Decline
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <!-- PAGINACIÓN  -->
+        <section class="mx-auto mt-8 flex w-[90%] justify-center xs:mt-10">
+          <nav aria-label="Page navigation example">
+            <ul class="flex items-center h-8 -space-x-px text-sm">
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 ms-0 rounded-s-lg border-e-0 hover:bg-gray-100 hover:text-gray-700"
+                >
+                  <span class="sr-only">Previous</span>
+                  <svg
+                    class="h-2.5 w-2.5 rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 1 1 5l4 4"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                  >1</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                  >2</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-current="page"
+                  class="z-10 flex items-center justify-center h-8 px-3 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 "
+                  >3</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                  >4</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                  >5</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center justify-center h-8 px-3 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700"
+                >
+                  <span class="sr-only">Next</span>
+                  <svg
+                    class="h-2.5 w-2.5 rtl:rotate-180"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 6 10"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 9 4-4-4-4"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </section>
+      </section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- PRODUCTOS MÁS VENDIDOS  -->
+    <section>
+      <section class="mx-auto mt-8 w-[90%] xs:mt-12">
+        <h2 class="font-roboto font-bold text-[#008ECC]">
+          Productos más vendidos
+        </h2>
+        <aside>
+          <hr class="h-1 w-48 bg-[#008ECC]" />
+          <hr />
+        </aside>
+      </section>
+
+      <div class="relative flex items-center mt-4">
+        <!-- Contenedor del carrusel -->
+        <div
+          id="carousel"
+          class="no-scrollbar mx-auto flex w-[90%] gap-12 overflow-x-scroll scroll-smooth"
+        >
+          <!-- MÁS VENDIDO 1  -->
+          <div class="text-cente min-w-[100px]">
+            <a class="" href="#">
+              <section
+                class="flex h-28 w-28 items-center justify-center rounded-2xl bg-[#F5F5F5] shadow-sm md:h-32 md:w-32"
+              >
+                <figure class="w-full h-20 b">
+                  <img
+                    src="../../public/img/masVendidos/p1.png"
+                    alt="Soldadura"
+                    class="object-cover w-full h-full"
+                  />
+                </figure>
+              </section>
+            </a>
+            <aside class="mt-2 mb-5">
+              <h4 class="font-roboto text-sm text-[#666666]">Marca</h4>
+              <p class="mt-1 text-sm font-medium text-gray-700">
+                Nombre producto
+              </p>
+            </aside>
+          </div>
+
+          <!-- MÁS VENDIDO 2  -->
+          <div class="min-w-[100px] text-center">
+            <a class="" href="#">
+              <section
+                class="flex h-28 w-28 items-center justify-center rounded-2xl bg-[#F5F5F5] shadow-sm md:h-32 md:w-32"
+              >
+                <figure class="w-full h-20 b">
+                  <img
+                    src="../../public/img/masVendidos/p1.png"
+                    alt="Soldadura"
+                    class="object-cover w-full h-full"
+                  />
+                </figure>
+              </section>
+            </a>
+            <aside class="mt-2 mb-5">
+              <h4 class="font-roboto text-sm text-[#666666]">Marca</h4>
+              <p class="mt-1 text-sm font-medium text-gray-700">
+                Nombre producto
+              </p>
+            </aside>
+          </div>
+
+          <!-- MÁS VENDIDO 3  -->
+          <div class="min-w-[100px] text-center">
+            <a class="" href="#">
+              <section
+                class="flex h-28 w-28 items-center justify-center rounded-2xl bg-[#F5F5F5] shadow-sm md:h-32 md:w-32"
+              >
+                <figure class="w-full h-20 b">
+                  <img
+                    src="../../public/img/masVendidos/p1.png"
+                    alt="Soldadura"
+                    class="object-cover w-full h-full"
+                  />
+                </figure>
+              </section>
+            </a>
+            <aside class="mt-2 mb-5">
+              <h4 class="font-roboto text-sm text-[#666666]">Marca</h4>
+              <p class="mt-1 text-sm font-medium text-gray-700">
+                Nombre producto
+              </p>
+            </aside>
+          </div>
+
+          <!-- MÁS VENDIDO 4  -->
+          <div class="min-w-[100px] text-center">
+            <a class="" href="#">
+              <section
+                class="flex h-28 w-28 items-center justify-center rounded-2xl bg-[#F5F5F5] shadow-sm md:h-32 md:w-32"
+              >
+                <figure class="w-full h-20 b">
+                  <img
+                    src="../../public/img/masVendidos/p1.png"
+                    alt="Soldadura"
+                    class="object-cover w-full h-full"
+                  />
+                </figure>
+              </section>
+            </a>
+            <aside class="mt-2 mb-5">
+              <h4 class="font-roboto text-sm text-[#666666]">Marca</h4>
+              <p class="mt-1 text-sm font-medium text-gray-700">
+                Nombre producto
+              </p>
+            </aside>
+          </div>
+
+          <!-- MÁS VENDIDO 5  -->
+
+          <div class="min-w-[100px] text-center">
+            <a class="" href="#">
+              <section
+                class="flex h-28 w-28 items-center justify-center rounded-2xl bg-[#F5F5F5] shadow-sm md:h-32 md:w-32"
+              >
+                <figure class="w-full h-20 b">
+                  <img
+                    src="../../public/img/masVendidos/p1.png"
+                    alt="Soldadura"
+                    class="object-cover w-full h-full"
+                  />
+                </figure>
+              </section>
+            </a>
+            <aside class="mt-2 mb-5">
+              <h4 class="font-roboto text-sm text-[#666666]">Marca</h4>
+              <p class="mt-1 text-sm font-medium text-gray-700">Soldadura</p>
+            </aside>
+          </div>
+
+          <!-- MÁS VENDIDO 6  -->
+
+          <div class="min-w-[100px] text-center">
+            <a class="" href="#">
+              <section
+                class="flex h-28 w-28 items-center justify-center rounded-2xl bg-[#F5F5F5] shadow-sm md:h-32 md:w-32"
+              >
+                <figure class="w-full h-20 b">
+                  <img
+                    src="../../public/img/masVendidos/p1.png"
+                    alt="Soldadura"
+                    class="object-cover w-full h-full"
+                  />
+                </figure>
+              </section>
+            </a>
+            <aside class="mt-2 mb-5">
+              <h4 class="font-roboto text-sm text-[#666666]">Marca</h4>
+              <p class="mt-1 text-sm font-medium text-gray-700">Soldadura</p>
+            </aside>
+          </div>
+          <!-- MÁS VENDIDO 7  -->
+
+          <div class="min-w-[100px] text-center">
+            <a class="" href="#">
+              <section
+                class="flex h-28 w-28 items-center justify-center rounded-2xl bg-[#F5F5F5] shadow-sm md:h-32 md:w-32"
+              >
+                <figure class="w-full h-20 b">
+                  <img
+                    src="../../public/img/masVendidos/p1.png"
+                    alt="Soldadura"
+                    class="object-cover w-full h-full"
+                  />
+                </figure>
+              </section>
+            </a>
+            <aside class="mt-2 mb-5">
+              <h4 class="font-roboto text-sm text-[#666666]">Marca</h4>
+              <p class="mt-1 text-sm font-medium text-gray-700">Soldadura</p>
+            </aside>
+          </div>
+
+          <!-- MÁS VENDIDO 8   REDUCIR EL GAP PARA QUE ENTRE-->
+          <div class="min-w-[100px] text-center md:h-32 md:w-32">
+            <a class="" href="#">
+              <section
+                class="flex h-28 w-28 items-center justify-center rounded-2xl bg-[#F5F5F5] shadow-sm"
+              >
+                <figure class="w-full h-20 b">
+                  <img
+                    src="../../public/img/masVendidos/p1.png"
+                    alt="Soldadura"
+                    class="object-cover w-full h-full"
+                  />
+                </figure>
+              </section>
+            </a>
+            <aside class="mt-2 mb-5">
+              <h4 class="font-roboto text-sm text-[#666666]">Marca</h4>
+              <p class="mt-1 text-sm font-medium text-gray-700">Soldadura</p>
+            </aside>
+          </div>
+
+          <!-- Agregar más categorías aquí -->
+        </div>
+      </div>
+    </section>
+
+    <!-- INFORMACIÓN DE COTIZACIÓN -->
+    <section
+      class="mt-8 flex w-full items-center justify-center bg-[#2C5075] py-10"
+    >
+      <article class="w-[90%] text-center font-roboto text-white">
+        <h1 class="text-2xl font-extrabold">
+          ¿Estás listo para tu siguiente proyecto?
+        </h1>
+        <p class="mt-3 text-sm font-light leading-relaxed">
+          ¡Solicita una cotización hoy mismo y descubre cómo podemos ayudarte a
+          alcanzar tus objetivos!
+        </p>
+        <a
+          class="mt-4 inline-block rounded-lg bg-[#0F172A] px-5 py-3 hover:bg-[#080C15]"
+          href="#"
+          >Solicita tu cotización</a
+        >
+      </article>
+    </section>
+
+    <!-- INFORMACIÓN HACIA EL CLIENTE -->
+    <aside class="mx-auto mt-8 flex w-[90%] flex-wrap gap-10 xs:justify-center lg:justify-start lg:gap-2 lg:my-16">
+      <section class="flex w-[300px] flex-row gap-3 md:w-[400px] lg:w-[300px] ">
+        <figure
+          class="flex min-h-[70px] min-w-[70px] items-center justify-center rounded-br-2xl rounded-tl-2xl bg-[#339BE2]"
+        >
+          <img
+            src="../../public/img/Iconos/atencion_cliente.webp"
+            alt="atención al cliente icon"
+          />
+        </figure>
+        <section class="text-sm font-light font-roboto">
+          <p>
+            Nuestro equipo de atención al cliente te acompaña para que
+            encuentres la mejor solución en soldadura
+          </p>
+        </section>
+      </section>
+
+      <section class="flex w-[300px] flex-row gap-3 md:w-[400px] lg:w-[300px]">
+        <figure
+          class="flex min-h-[70px] min-w-[70px] items-center justify-center rounded-br-2xl rounded-tl-2xl bg-[#339BE2]"
+        >
+          <img
+            class="object-cover"
+            src="../../public/img/Iconos/estandares.webp"
+            alt="atención al cliente icon"
+          />
+        </figure>
+        <section class="text-sm font-light font-roboto">
+          <p>
+            Nuestro equipo de atención al cliente te acompaña para que
+            encuentres la mejor solución en soldadura
+          </p>
+        </section>
+      </section>
+
+      <section class="flex w-[300px] flex-row gap-3 md:w-[400px] lg:w-[300px]">
+        <figure
+          class="flex min-h-[70px] min-w-[70px] items-center justify-center rounded-br-2xl rounded-tl-2xl bg-[#339BE2]"
+        >
+          <img
+            src="../../public/img/Iconos/entrega.webp"
+            alt="atención al cliente icon"
+          />
+        </figure>
+        <section class="text-sm font-light font-roboto">
+          <p>
+            Valoramos tu tiempo. Garantizamos entregas rápidas y confiables para
+            que tus proyectos nunca se detengan.
+          </p>
+        </section>
+      </section>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer class="mt-10 bg-[#001F3F] font-lato text-white">
+      <div class="container flex flex-col p-6 mx-auto text-center">
+        <div class="flex flex-col items-center lg:mt-7 lg:flex-row">
+          <div class="flex justify-center w-full -mx-6 lg:w-2/5">
+            <div class="px-6">
+              <section class="flex justify-center">
+                <a class="text-center" href="#">
+                  <img
+                    class="w-auto h-14"
+                    src="../../public/img/logoTemax.png"
+                    alt=""
+                  />
+                </a>
+              </section>
+
+              <p class="max-w-sm mt-2 2xl:text-xl">
+                Donde la calidad se forja y la confianza se construye con cada
+                producto
+              </p>
+
+              <!-- <div class="flex mt-6 -mx-2">
+                              <a href="#"
+                                  class="mx-2 transition-colors duration-300 hover:text-blue-500 "
+                                  aria-label="Reddit">
+                                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                          d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C21.9939 17.5203 17.5203 21.9939 12 22ZM6.807 10.543C6.20862 10.5433 5.67102 10.9088 5.45054 11.465C5.23006 12.0213 5.37133 12.6558 5.807 13.066C5.92217 13.1751 6.05463 13.2643 6.199 13.33C6.18644 13.4761 6.18644 13.6229 6.199 13.769C6.199 16.009 8.814 17.831 12.028 17.831C15.242 17.831 17.858 16.009 17.858 13.769C17.8696 13.6229 17.8696 13.4761 17.858 13.33C18.4649 13.0351 18.786 12.3585 18.6305 11.7019C18.475 11.0453 17.8847 10.5844 17.21 10.593H17.157C16.7988 10.6062 16.458 10.7512 16.2 11C15.0625 10.2265 13.7252 9.79927 12.35 9.77L13 6.65L15.138 7.1C15.1931 7.60706 15.621 7.99141 16.131 7.992C16.1674 7.99196 16.2038 7.98995 16.24 7.986C16.7702 7.93278 17.1655 7.47314 17.1389 6.94094C17.1122 6.40873 16.6729 5.991 16.14 5.991C16.1022 5.99191 16.0645 5.99491 16.027 6C15.71 6.03367 15.4281 6.21641 15.268 6.492L12.82 6C12.7983 5.99535 12.7762 5.993 12.754 5.993C12.6094 5.99472 12.4851 6.09583 12.454 6.237L11.706 9.71C10.3138 9.7297 8.95795 10.157 7.806 10.939C7.53601 10.6839 7.17843 10.5422 6.807 10.543ZM12.18 16.524C12.124 16.524 12.067 16.524 12.011 16.524C11.955 16.524 11.898 16.524 11.842 16.524C11.0121 16.5208 10.2054 16.2497 9.542 15.751C9.49626 15.6958 9.47445 15.6246 9.4814 15.5533C9.48834 15.482 9.52348 15.4163 9.579 15.371C9.62737 15.3318 9.68771 15.3102 9.75 15.31C9.81233 15.31 9.87275 15.3315 9.921 15.371C10.4816 15.7818 11.159 16.0022 11.854 16C11.9027 16 11.9513 16 12 16C12.059 16 12.119 16 12.178 16C12.864 16.0011 13.5329 15.7863 14.09 15.386C14.1427 15.3322 14.2147 15.302 14.29 15.302C14.3653 15.302 14.4373 15.3322 14.49 15.386C14.5985 15.4981 14.5962 15.6767 14.485 15.786V15.746C13.8213 16.2481 13.0123 16.5208 12.18 16.523V16.524ZM14.307 14.08H14.291L14.299 14.041C13.8591 14.011 13.4994 13.6789 13.4343 13.2429C13.3691 12.8068 13.6162 12.3842 14.028 12.2269C14.4399 12.0697 14.9058 12.2202 15.1478 12.5887C15.3899 12.9572 15.3429 13.4445 15.035 13.76C14.856 13.9554 14.6059 14.0707 14.341 14.08H14.306H14.307ZM9.67 14C9.11772 14 8.67 13.5523 8.67 13C8.67 12.4477 9.11772 12 9.67 12C10.2223 12 10.67 12.4477 10.67 13C10.67 13.5523 10.2223 14 9.67 14Z">
+                                      </path>
+                                  </svg>
+                              </a>
+                          
+                              <a href="#"
+                                  class="mx-2 transition-colors duration-300 hover:text-blue-500"
+                                  aria-label="Facebook">
+                                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                          d="M2.00195 12.002C2.00312 16.9214 5.58036 21.1101 10.439 21.881V14.892H7.90195V12.002H10.442V9.80204C10.3284 8.75958 10.6845 7.72064 11.4136 6.96698C12.1427 6.21332 13.1693 5.82306 14.215 5.90204C14.9655 5.91417 15.7141 5.98101 16.455 6.10205V8.56104H15.191C14.7558 8.50405 14.3183 8.64777 14.0017 8.95171C13.6851 9.25566 13.5237 9.68693 13.563 10.124V12.002H16.334L15.891 14.893H13.563V21.881C18.8174 21.0506 22.502 16.2518 21.9475 10.9611C21.3929 5.67041 16.7932 1.73997 11.4808 2.01722C6.16831 2.29447 2.0028 6.68235 2.00195 12.002Z">
+                                      </path>
+                                  </svg>
+                              </a>
+                          
+                              <a href="#"
+                                  class="mx-2 transition-colors duration-300 hover:text-blue-500"
+                                  aria-label="Github">
+                                  <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path
+                                          d="M12.026 2C7.13295 1.99937 2.96183 5.54799 2.17842 10.3779C1.395 15.2079 4.23061 19.893 8.87302 21.439C9.37302 21.529 9.55202 21.222 9.55202 20.958C9.55202 20.721 9.54402 20.093 9.54102 19.258C6.76602 19.858 6.18002 17.92 6.18002 17.92C5.99733 17.317 5.60459 16.7993 5.07302 16.461C4.17302 15.842 5.14202 15.856 5.14202 15.856C5.78269 15.9438 6.34657 16.3235 6.66902 16.884C6.94195 17.3803 7.40177 17.747 7.94632 17.9026C8.49087 18.0583 9.07503 17.99 9.56902 17.713C9.61544 17.207 9.84055 16.7341 10.204 16.379C7.99002 16.128 5.66202 15.272 5.66202 11.449C5.64973 10.4602 6.01691 9.5043 6.68802 8.778C6.38437 7.91731 6.42013 6.97325 6.78802 6.138C6.78802 6.138 7.62502 5.869 9.53002 7.159C11.1639 6.71101 12.8882 6.71101 14.522 7.159C16.428 5.868 17.264 6.138 17.264 6.138C17.6336 6.97286 17.6694 7.91757 17.364 8.778C18.0376 9.50423 18.4045 10.4626 18.388 11.453C18.388 15.286 16.058 16.128 13.836 16.375C14.3153 16.8651 14.5612 17.5373 14.511 18.221C14.511 19.555 14.499 20.631 14.499 20.958C14.499 21.225 14.677 21.535 15.186 21.437C19.8265 19.8884 22.6591 15.203 21.874 10.3743C21.089 5.54565 16.9181 1.99888 12.026 2Z">
+                                      </path>
+                                  </svg>
+                              </a>
+                          </div> -->
+            </div>
+          </div>
+
+          <div class="mt-6 sm:mt-10 lg:mt-0 lg:flex-1">
+            <div
+              class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-10 md:grid-cols-4 lg:grid-cols-4 2xl:text-lg"
+            >
+              <div>
+                <h3 class="font-semibold uppercase">About</h3>
+                <a href="#" class="block mt-2 text-sm hover:underline"
+                  >Company</a
+                >
+                <a href="#" class="block mt-2 text-sm hover:underline"
+                  >community</a
+                >
+                <a href="#" class="block mt-2 text-sm hover:underline"
+                  >Careers</a
+                >
+              </div>
+
+              <div>
+                <h3 class="font-semibold uppercase">Blog</h3>
+                <a href="#" class="block mt-2 text-sm hover:underline">Tec</a>
+                <a href="#" class="block mt-2 text-sm hover:underline">Music</a>
+                <a href="#" class="block mt-2 text-sm hover:underline"
+                  >Videos</a
+                >
+              </div>
+
+              <div>
+                <h3 class="font-semibold uppercase">Products</h3>
+                <a href="#" class="block mt-2 text-sm hover:underline"
+                  >Mega cloud</a
+                >
+                <a href="#" class="block mt-2 text-sm hover:underline"
+                  >Aperion UI</a
+                >
+                <a href="#" class="block mt-2 text-sm hover:underline"
+                  >Meraki UI</a
+                >
+              </div>
+              <div>
+                <h3 class="font-semibold uppercase">Contact</h3>
+                <span class="block mt-2 text-sm hover:underline"
+                  >+1 526 654 8965</span
+                >
+                <span class="block mt-2 text-sm hover:underline"
+                  >example@email.com</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="lg:mt-7">
+          <hr class="h-px my-6 bg-gray-200 border-none" />
+          <div>
+            <p class="text-center">©Temax - Todos los derechos reservados</p>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+    <!-- WHATSAPP -->
+    <section class="fixed bottom-0 z-50 p-4 right-1">
+      <a href="#">
+        <img src="../../public/img/Iconos/whatsapp.webp" alt="WhatsApp Temax" />
+      </a>
+    </section>
+
+    <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+
+    <script src="../main.js"></script>
+  </body>
 </html>
