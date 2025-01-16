@@ -22,8 +22,12 @@ export default {
       },
       screens: {
         'xs': '480px',
-        
       },
+      backgroundImage: {
+        'products-portada': "url('/img/soldador/maquina.webp')",
+        'nosotros-portada': "url('/img/footer-texture.png')",
+        
+      }
 
     },
   },
