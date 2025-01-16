@@ -12,7 +12,9 @@ export default {
         'montserrat': [ 'Montserrat', 'serif'],
         'roboto': [ 'Roboto', 'serif'],
         'actor': ['Actor', 'serif'],
-        'inter': [ 'Inter', 'serif']
+        'inter': [ 'Inter', 'serif'],
+        'open-sans': ['Open Sans', 'serif'],
+        'poppins':['Poppins', 'serif']
       },
       colors: {
         'azul-oscuro-title': '#041C3C',
@@ -25,10 +27,10 @@ export default {
       },
       backgroundImage: {
         'products-portada': "url('/img/soldador/maquina.webp')",
-        'nosotros-portada': "url('/img/footer-texture.png')",
-        
+        'nosotros-portada': "url('/img/soldador/implementosNosotros.webp')",  
+        'nosotros-fondo':"url('/img/fondos/fondoNosotrosPage.webp')",  
       }
-
+    
     },
   },
   plugins: [
