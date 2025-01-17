@@ -21,7 +21,7 @@
     <!-- HEADER -->
     <nav
       x-data="{ isOpen: false }"
-      class="relative z-50 w-full h-10 shadow bg-gradient-to-b from-black/100 via-black/100 to-black/100 xs:h-12 md:absolute md:bg-gradient-to-b md:from-black/100 md:via-black/60 md:to-black/0 lg:pt-4 2xl:px-5"
+      class="relative z-50 w-full h-10 shadow bg-gradient-to-b from-black/100 via-black/100 to-black/100 xs:h-12 md:absolute md:bg-gradient-to-b md:from-black/100 md:via-black/60 md:to-black/0 lg:pt-4 2xl:px-5 "
     >
       <section
         class="mx-auto h-full max-w-[1424px] px-6 py-2 md:flex md:items-center md:justify-between"
@@ -120,9 +120,9 @@
     >
       <!-- TÍTULO  -->
       <section
-        class="absolute flex h-full w-full max-w-[1424px] flex-row items-center justify-center gap-4 object-cover text-left xl:text-center"
+        class="absolute flex h-full w-full max-w-[1424px] flex-row items-center justify-center gap-4 object-cover text-left "
       >
-        <aside><hr class="h-80 w-2 bg-[#339BE2]" /></aside>
+        <aside><hr class="h-80 w-2 bg-[#339BE2] xs:h-64 md:h-40" /></aside>
 
         <section class="flex w-[60%] flex-col gap-3 xs:w-[75%] xs:gap-6">
           <section>
@@ -144,13 +144,13 @@
     </section>
 
     <!-- SOMOS TEMAX -->
-    <aside class="mx-auto mt-8 flex w-[90%] flex-col text-center font-roboto">
+    <aside class="mx-auto mt-8 flex w-[90%] flex-col text-center font-roboto max-w-[1424px] 2xl:mt-10">
       <section>
-        <h1 class="text-2xl font-extrabold text-[#272727]">
+        <h1 class="text-2xl font-extrabold text-[#272727] lg:text-3xl">
           SOMOS <span class="text-[#339BE2]">TEMAX</span>
         </h1>
       </section>
-      <section class="leading-7 text-[#272727]">
+      <section class="leading-7 text-[#272727] lg:pt-1">
         Una empresa líder en la venta de materiales de soldadura, comprometida
         con brindar productos de calidad superior y soluciones que impulsan la
         productividad de nuestros clientes. Con años de experiencia en el
@@ -160,13 +160,15 @@
     </aside>
 
     <!-- MISION, VISION, COMPROMISO  -->
-    <section class="mx-auto mt-16 flex w-[90%] flex-wrap gap-10 font-roboto">
-      <section class="flex w-[310px] flex-col items-center justify-center">
+    <section class="mx-auto mt-16 flex w-[90%] flex-wrap gap-10 font-roboto  justify-center xs:gap-14  lg:mt-24 lg:pb-10 lg:justify-between max-w-[1424px]">
+      <section class="flex w-[310px] lg:w-[260px] xl:w-[320px] 2xl:w-[370px] flex-col items-center ">
         <aside>
           <figure>
-            <img src="../../public/img/Iconos/mision.webp" alt="mision Temax" />
+            <img src="../../public/img/Iconos/mision.webp" alt="mision Temax" 
+            loading="lazy"
+            />
           </figure>
-          <p class="text-center text-[17px] font-bold text-[#172755]">Misión</p>
+          <p class="text-center text-[17px] font-bold text-[#172755] lg:pt-2 2xl:text-[19px]">Misión</p>
         </aside>
         <aside>
           <p class="text-center text-base font-light leading-6 text-[#272727]">
@@ -177,12 +179,13 @@
         </aside>
       </section>
 
-      <section class="flex w-[310px] flex-col items-center justify-center">
+      <section class="flex w-[310px] lg:w-[260px] xl:w-[320px] 2xl:w-[370px] flex-col items-center  ">
         <aside>
           <figure>
-            <img src="../../public/img/Iconos/vision.webp" alt="vision Temax" />
+            <img src="../../public/img/Iconos/vision.webp" alt="vision Temax" 
+            loading="lazy"/>
           </figure>
-          <p class="text-center text-[17px] font-bold text-[#172755]">Visión</p>
+          <p class="text-center text-[17px] font-bold text-[#172755] lg:pt-2 2xl:text-[19px]">Visión</p>
         </aside>
         <aside>
           <p class="text-center text-base font-light leading-6 text-[#272727]">
@@ -192,15 +195,16 @@
         </aside>
       </section>
 
-      <section class="flex w-[310px] flex-col items-center justify-center">
+      <section class="flex w-[310px] lg:w-[260px] xl:w-[320px] 2xl:w-[370px] flex-col items-center ">
         <aside>
           <figure>
             <img
               src="../../public/img/Iconos/compromiso.webp"
               alt="compromiso Temax"
+              loading="lazy"
             />
           </figure>
-          <p class="text-center text-[17px] font-bold text-[#172755]">
+          <p class="text-center text-[17px] font-bold text-[#172755] lg:pt-2 2xl:text-[19px]">
             Compromiso
           </p>
         </aside>
@@ -215,21 +219,22 @@
     </section>
 
     <!-- BENEFICIOS  -->
-    <section class="mt-10 w-full bg-[#F2F7FF] ">
-      <article class="mx-auto flex w-[90%] flex-col gap-10 pt-5 pb-10">
-        <aside>
-          <h2 class="font-roboto text-2xl font-bold text-[#2D2F30]">
+    <section class="mt-10 w-full bg-[#F2F7FF] max-w-[1424px] mx-auto ">
+      <article class="mx-auto flex w-[90%] flex-col gap-10 pt-5 pb-10 md:pt-9 md:pb-12 lg:flex-row lg:gap-5 lg:py-16 2xl:gap-0 max-w-[1424px]">
+        
+        <aside class="lg:w-[45%]  lg:flex lg:justify-center lg:flex-col">
+          <h2 class="font-roboto text-2xl font-bold text-[#2D2F30] lg:text-[40px] lg:leading-tight 2xl:text-[45px] ">
             Beneficios de trabajar con nosotros
           </h2>
-          <p class="font-open-sans text-base font-normal text-[#8B8C8C]">
+          <p class="font-open-sans text-base font-normal text-[#8B8C8C] lg:leading-7 lg:pt-2 2xl:text-lg">
             En Temax no solo vendemos materiales de soldadura, sino que
             ofrecemos soluciones que impulsan el éxito de tu negocio:
           </p>
         </aside>
 
-        <section class="flex flex-wrap justify-center gap-6">
+        <section class="flex flex-wrap justify-center gap-6  lg:w-[60%] xl:gap-8">
           <section
-            class="flex h-[260px] w-[250px] flex-col justify-center rounded-lg bg-white px-4 pt-4 pb-2 shadow-lg"
+            class="flex h-[260px] w-[250px] xl:h-[270px] xl:w-[260px] flex-col  2xl:h-[280px] 2xl:2-[270px] rounded-lg bg-white px-4 pt-4 pb-2 shadow-lg"
           >
             <section>
               <figure>
@@ -241,11 +246,11 @@
               </figure>
               <aside>
                 <h3
-                  class="pt-2 font-roboto text-lg font-semibold text-[#363940]"
+                  class="pt-2 font-roboto text-lg font-semibold text-[#363940] 2xl:text-xl"
                 >
                   Precios competitivos
                 </h3>
-                <p class="font-open-sans pt-1 text-[#8B8C8C] text-sm">
+                <p class="font-open-sans pt-2 text-[#8B8C8C] text-sm 2xl:text-base">
                   Diseñamos nuestras opciones pensando en tu presupuesto,
                   asegurando que accedas a materiales de calidad sin exceder tus
                   costos
@@ -255,7 +260,7 @@
           </section>
 
           <section
-            class="flex h-[260px] w-[250px] flex-col  rounded-lg bg-white px-4 pt-4 pb-2 shadow-lg"
+            class="flex h-[260px] w-[250px] xl:h-[270px] xl:w-[260px] 2xl:h-[280px] 2xl:2-[270px] flex-col  rounded-lg bg-white px-4 pt-4 pb-2 shadow-lg"
           >
             <section >
               <figure>
@@ -267,11 +272,11 @@
               </figure>
               <aside>
                 <h3
-                  class="pt-2 font-roboto text-lg font-semibold text-[#363940]"
+                  class="pt-2 font-roboto text-lg font-semibold text-[#363940] 2xl:text-xl"
                 >
                   Asesoramiento especializado
                 </h3>
-                <p class="font-open-sans pt-1 text-[#8B8C8C] text-sm">
+                <p class="font-open-sans pt-1 text-[#8B8C8C] text-sm 2xl:text-base">
                   Nuestro equipo de expertos no solo te orienta, sino que te
                   acompaña en cada paso para garantizar que elijas las
                   soluciones más efectivas y rentables para tu proyecto
@@ -281,8 +286,8 @@
           </section>
 
           <section
-            class="flex h-[260px] w-[250px] flex-col  rounded-lg bg-white px-4 pt-4 pb-2 shadow-lg"
-          >
+            class="flex h-[260px] w-[250px]  xl:h-[270px] xl:w-[260px]  2xl:h-[280px] 2xl:2-[270px] flex-col  rounded-lg bg-white px-4 pt-4 pb-2 shadow-lg"
+          > 
             <section>
               <figure> 
                 <img
@@ -293,15 +298,15 @@
               </figure>
               <aside>
                 <h3
-                  class="pt-2 font-roboto text-lg font-semibold text-[#363940]"
+                  class="pt-2 font-roboto text-lg font-semibold text-[#363940] 2xl:text-xl"
                 >Compromiso con la entrega</h3>
-                <p class="font-open-sans pt-1 text-[#8B8C8C] text-sm">Nos aseguramos de cumplir con los plazos establecidos, porque entendemos que el tiempo es clave para el éxito de tus operaciones</p>
+                <p class="font-open-sans pt-1 text-[#8B8C8C] text-sm 2xl:text-base">Nos aseguramos de cumplir con los plazos establecidos, porque entendemos que el tiempo es clave para el éxito de tus operaciones</p>
               </aside>
             </section>
           </section>
 
           <section
-          class="flex h-[260px] w-[250px] flex-col  rounded-lg bg-white px-4 pt-4 pb-2 shadow-lg"
+          class="flex h-[260px] w-[250px]  xl:h-[270px] xl:w-[260px] 2xl:h-[280px] 2xl:2-[270px]  flex-col  rounded-lg bg-white px-4 pt-4 pb-2 shadow-lg"
         >
           <section>
             <figure> 
@@ -313,9 +318,9 @@
             </figure>
             <aside>
               <h3
-                class="pt-2 font-roboto text-lg font-semibold text-[#363940]"
+                class="pt-2 font-roboto text-lg font-semibold text-[#363940] 2xl:text-xl"
               >Servicio que hace la diferencia</h3>
-              <p class="font-open-sans pt-1 text-[#8B8C8C] text-sm">Nos aseguramos de que cada cliente reciba atención personalizada y materiales de soldadura que cumplan con los más altos estándares de calidad</p>
+              <p class="font-open-sans pt-1 text-[#8B8C8C] text-sm 2xl:text-base">Nos aseguramos de que cada cliente reciba atención personalizada y materiales de soldadura que cumplan con los más altos estándares de calidad</p>
             </aside>
           </section>
         </section>
@@ -328,53 +333,61 @@
     </section>
 
     <!-- LOGROS  -->
-    <figure class="bg-nosotros-fondo h-[630px] w-full flex justify-center">
+    <figure class="bg-nosotros-fondo h-[630px] w-full flex justify-center lg:h-[400px] max-w-[1424px] mx-auto">
       <section class="w-[90%] flex flex-col text-white pt-20 gap-10">
         <section class="text-center">
-          <h2 class="text-[26px] font-semibold font-montserrat">Logros que nos respaldan</h2>
+          <h2 class="text-[26px] font-semibold font-montserrat md:text-3xl lg:text-4xl 2xl:text-[40px]">Logros que nos respaldan</h2>
           <p class="pt-3 font-light font-poppins">Nuestra experiencia y compromiso reflejados en números</p>
         </section>
-        <section class="flex flex-col items-center justify-center gap-6 font-poppins">
-          <aside class="flex flex-col items-center">
-            <h1 class="text-4xl font-extrabold">+200</h1>
-            <p class="pt-2">Clientes satisfechos</p>
-            <hr class="w-20 h-1 mt-5">
+        <section class="flex flex-col items-center justify-center gap-6 font-poppins lg:flex-row">
+          <aside class="flex flex-col items-center lg:flex-row">
+            <section class="flex flex-col items-center">
+              <h1 class="text-4xl font-extrabold md:text-[40px] 2xl:text-[48px]">+200</h1>
+            <p class="pt-2 md:text-lg">Clientes satisfechos</p>
+            </section>
+            
+            <section class="flex flex-col">
+              <hr class="w-20 h-1 mt-5 lg:mt-0 lg:rotate-90 ">
+            </section>
+           
           </aside>
           
-          <aside class="flex flex-col items-center">
-            <h1 class="text-4xl font-extrabold">+1000</h1>
-            <p class="pt-2">Entregas realizadas</p>
-            <hr class="w-20 h-1 mt-5">
+          <aside class="flex flex-col items-center lg:flex-row">
+            <section class="flex flex-col items-center">
+              <h1 class="text-4xl font-extrabold md:text-[40px] 2xl:text-[48px]">+1000</h1>
+            <p class="pt-2 md:text-lg">Entregas realizadas</p>
+            
+            </section>
+            <section class="flex flex-col">
+              <hr class="w-20 h-1 mt-5 lg:mt-0 lg:rotate-90 ">
+            </section>
           </aside>
 
-          <aside class="flex flex-col items-center">
-            <h1 class="text-4xl font-extrabold">+5</h1>
-            <p class="pt-2">Años de experiencia</p>
-            
+          <aside class="flex flex-col items-center ">
+            <h1 class="text-4xl font-extrabold md:text-[40px] 2xl:text-[48px]">+5</h1>
+            <p class="pt-2 md:text-lg">Años de experiencia</p>
           </aside>
-          
         </section>
       </section>
     </figure>
 
-
     <!-- INFORMACIÓN DE CONTACTO   -->
-    <section class="flex flex-col mt-10 w-[90%] font-roboto mx-auto gap-10 ">
-      <section> 
+    <section class="flex flex-col md:flex-row mt-10 w-[90%] font-roboto mx-auto gap-10 max-w-[1424px]  ">
+      <section class="lg:pt-5"> 
           <h3 class="text-[#2D2F30] text-2xl font-bold">¿Necesitas la mejor solución en soldadura?</h3>
           <p class="font-light text-[#4F4F4F] pt-2 leading-7 mb-6">Nuestro equipo de expertos está listo para asesorarte y brindarte los mejores materiales y equipos del mercado. ¡Resolvemos tus dudas y te entregamos un presupuesto personalizado en menos de 24 horas!</p>
-          <a href="#" class="bg-[#094B72] py-3 px-5  rounded-lg text-white text-lg hover:bg-[#062f4b]">Contactar</a>
+          <a href="#" class="bg-[#094B72] py-3 px-5  rounded-lg text-white text-lg hover:bg-[#062f4b] lg:py-4 lg:px-7">Contactar</a>
       </section>
       <section>
         <figure class="w-72">
-          <img class="rounded-tr-3xl rounded-bl-3xl " src="../../public/img/fondos/mujerContacto.webp" alt="asesor de ventas Temax" loading="lazy">
+          <img class="shadow-md rounded-tr-3xl rounded-bl-3xl" src="../../public/img/fondos/mujerContacto.webp" alt="asesor de ventas Temax" loading="lazy">
         </figure>
       </section>
     </section>
 
     
     <!-- FOOTER -->
-    <footer class="mt-10 bg-[#001F3F] font-lato text-white">
+    <footer class="mt-10 bg-[#001F3F] font-lato text-white max-w-[1424px] mx-auto">
       <div class="container flex flex-col p-6 mx-auto text-center">
         <div class="flex flex-col items-center lg:mt-7 lg:flex-row">
           <div class="flex justify-center w-full -mx-6 lg:w-2/5">
