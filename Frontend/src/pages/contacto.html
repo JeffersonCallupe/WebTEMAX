@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./public/img/logoTemax.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="../../src/styles/productos.css" />
+    <script
+      src="https://kit.fontawesome.com/efcdc368ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.8/dist/cdn.min.js"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/efcdc368ed.js"
+      crossorigin="anonymous"
+    ></script>
+
+  </head>
+
+  <body class="bg-[#EFF3FA]">
+    <!-- HEADER -->
+    <nav
+      x-data="{ isOpen: false }"
+      class="relative z-50 w-full h-10 shadow bg-gradient-to-b from-black/100 via-black/100 to-black/100 xs:h-12 md:absolute md:bg-gradient-to-b md:from-black/100 md:via-black/60 md:to-black/0 lg:pt-4 2xl:px-5"
+    >
+      <section
+        class="mx-auto h-full max-w-[1424px] px-6 py-2 md:flex md:items-center md:justify-between"
+      >
+        <section class="flex items-center justify-between">
+          <a href="#">
+            <img
+              class="w-auto h-6 xs:h-9 sm:h-10 sm:w-auto 2xl:h-14"
+              src="../../public/img/logoTemax.png"
+              alt="logo-Temax"
+              loading="lazy"
+            />
+          </a>
+
+          <!-- Mobile menu button -->
+          <section class="flex lg:hidden">
+            <button
+              x-cloak
+              @click="isOpen = !isOpen"
+              type="button"
+              class="text-white/80 md:invisible hover:text-gray-600 focus:text-white/90 focus:outline-none"
+              aria-label="toggle menu"
+            >
+              <svg
+                x-show="!isOpen"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 xs:h-8 xs:w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4 8h16M4 16h16"
+                />
+              </svg>
+
+              <svg
+                x-show="isOpen"
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 xs:h-8 xs:w-8"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </section>
+        </section>
+
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <section
+          x-cloak
+          :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
+          class="absolute inset-x-0 z-20 w-full transition-all duration-300 ease-in-out md:relative md:top-0 md:flex md:w-auto md:translate-x-0 md:items-center md:bg-transparent md:opacity-100"
+        >
+          <section
+            class="flex flex-col px-6 text-center bg-black md:mx-6 md:flex-row md:bg-transparent xl:gap-5 2xl:gap-14"
+          >
+            <a
+              class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0 md:text-[17px] xl:text-lg"
+              href="../../index.html"
+              >Inicio</a
+            >
+            <a
+              class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0 md:text-[17px] xl:text-lg"
+              href="./productos.html"
+              >Produtos</a
+            >
+            <a
+              class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0 md:text-[17px] xl:text-lg"
+              href="./nosotros.html"
+              >Nosotros</a
+            >
+            <a
+              class="my-4 transform text-white/70 transition-colors duration-300 hover:text-blue-500 xs:my-6 xs:text-xl md:mx-4 md:my-0 md:text-[17px] xl:text-lg"
+              href="./contacto.html"
+              >Contacto</a
+            >
+          </section>
+        </section>
+      </section>
+    </nav>
+
+    <!-- PORTADA -->
+    <section
+      class="relative mx-auto flex h-96 max-h-[700px] w-full justify-center bg-contacto-portada bg-center bg-no-repeat md:h-[500px] lg:bg-fixed lg:bg-top xl:h-[600px] object-contain"
+    >
+      <!-- TÍTULO  -->
+      <section
+        class="absolute flex h-full w-full max-w-[1424px] flex-row items-center justify-center gap-4  text-left"
+      >
+        <aside><hr class="h-80 w-2 bg-[#339BE2] xs:h-64 md:h-40" /></aside>
+
+        <section class="flex w-[60%] flex-col gap-3 xs:w-[75%] xs:gap-6">
+          <section>
+            <h1
+              class="font-montserrat text-2xl font-black text-white/90 xs:text-3xl sm:text-4xl lg:text-5xl xl:text-[56px] 2xl:text-5xl"
+            >
+            CONTÁCTANOS Y LLEVA TUS PROYECTOS MÁS LEJOS 
+            </h1>
+            <p
+              class="text-base font-medium font-actor text-white/80 xs:text-base md:text-lg lg:text-xl 2xl:text-2xl"
+            >
+            ¿Tienes dudas o necesitas asesoría sobre materiales de soldadura? Estamos aquí para ayudarte. Contáctanos y obtén respuestas rápidas, soluciones personalizadas y un equipo listo para apoyarte en cada paso.
+            </p>
+          </section>
+        </section>
+      </section>
+    </section>
+
+
+    <!-- ENVIAR CORREO -->
+
+    <section class="flex flex-col bg-white  mx-auto w-[90%] mt-8 h-[700px] text-white rounded-md p-1">
+        <aside class="bg-[#011C2B] p-5  rounded-tl-md rounded-tr-md rounded-bl-md ">
+            <!-- INFORMACIÓN DE CONTACTO  -->
+            <section class="flex flex-col items-center justify-center gap-6">
+                <section class="text-center">
+                    <h2 class="text-xl font-semibold font-poppins">Información de contacto</h2>
+                    <p class="text-[11px] font-poppins">Estamos aquí para ayudarte en todo momento.</p>
+                </section>
+                <section class="flex flex-col gap-6">
+                    <section  class="flex flex-col items-center gap-4 w-44">
+                        <i class="fa-solid fa-phone-volume fa-lg"></i>
+                        <p class="text-xs text-center">+1012 3456 789</p>
+                    </section>
+                    <section class="flex flex-col items-center gap-4 w-44">
+                        <i class="fa-solid fa-envelope fa-lg"></i>
+                        <p class="text-xs text-center">demo@gmail.com</p>
+                    </section>
+                    <section class="flex flex-col items-center gap-4 w-44">
+                        <i class="fa-solid fa-location-dot fa-lg"></i>
+                        <p class="text-xs text-center">132 Dartmouth Street Boston, Massachusetts 02156 United States</p>
+                    </section>
+                </section>
+                <section>
+                    
+                </section>
+            </section>
+
+            <!-- FORMULARIO DE CORREO  -->
+            <section>
+
+
+                
+            </section>
+        </aside>
+        
+        <aside>
+            
+        </aside>
+        
+    </section>
+
+
+
+    
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </body>
+</html>

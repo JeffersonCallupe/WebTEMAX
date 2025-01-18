@@ -29,8 +29,8 @@ export default {
         'products-portada': "url('/img/soldador/maquina.webp')",
         'nosotros-portada': "url('/img/soldador/implementosNosotros.webp')",  
         'nosotros-fondo':"url('/img/fondos/fondoNosotrosPage.webp')",  
+        'contacto-portada':"url('/img/soldador/soldador10.png')",  
       }
-    
     },
   },
   plugins: [
