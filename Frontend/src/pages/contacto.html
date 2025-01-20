@@ -152,7 +152,7 @@
     <!-- ENVIAR CORREO -->
 
     <section
-      class="mx-auto mt-8 flex w-[90%] flex-col rounded-md bg-white  text-white shadow-lg lg:flex-row lg:p-2 lg:rounded-[10px]"
+      class="mx-auto mt-8 flex w-[90%] flex-col rounded-md bg-white  text-white shadow-lg lg:flex-row lg:p-2 lg:rounded-[10px] max-w-[1440px]"
     >
     
       <!-- INFO CONTACTO IZQUIERDA  -->
@@ -206,7 +206,7 @@
 
       <!-- FORMULARIO  -->
       <aside class="p-6 lg:w-[60%] lg:p-0">
-        <form class="max-w-xl mx-auto lg:pt-10">
+        <form class="max-w-xl mx-auto lg:pt-10 lg:w-[448px]">
           <div class="grid md:grid-cols-2 md:gap-6 lg:gap-8">
             <div class="relative z-0 w-full mb-5 group">
               <input
@@ -308,6 +308,62 @@
         </form>
       </aside>
     </section>
+
+
+
+    <!-- PREGUNTAS FRECUENTES  -->
+
+    <section class="w-[90%] mx-auto mt-10 lg:my-16 ">
+      <h1 class="pb-2 text-lg font-semibold font-roboto text-azul-oscuro-title">Preguntas frecuentes</h1>
+        <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white" data-inactive-classes="text-gray-500" class="" >
+          <h2 id="accordion-flush-heading-1">
+            <button type="button" class="flex items-center justify-between w-full gap-3 px-3 py-5 font-medium text-gray-500 border-b border-gray-200 text-start rtl:text-right" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
+              <span>¿Qué tipos de materiales de soldadura ofrecen?</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-flush-body-1" class="hidden px-3" aria-labelledby="accordion-flush-heading-1">
+            <div class="py-5 border-b border-gray-200 ">
+              <p class="mb-2 text-gray-500">En Temax, contamos con una amplia gama de productos, incluyendo electrodos, alambres de soldadura, varillas TIG, fundentes, y accesorios para procesos como MIG, TIG y soldadura por arco. Todos nuestros materiales cumplen con los estándares de calidad más exigentes.</p>
+            </div>
+          </div>
+          <h2 id="accordion-flush-heading-2">
+            <button type="button" class="flex items-center justify-between w-full gap-3 px-3 py-5 font-medium text-gray-500 border-b border-gray-200 rtl:text-right text-start" data-accordion-target="#accordion-flush-body-2" aria-expanded="false" aria-controls="accordion-flush-body-2">
+              <span>¿Cómo puedo saber qué material de soldadura es el adecuado para mi proyecto?</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
+            <div class="px-3 py-5 border-b border-gray-200 ">
+              <p class="mb-2 text-gray-500 ">Nuestro equipo de expertos está disponible para asesorarte. Solo necesitas contarnos las características de tu proyecto, como el tipo de material a soldar y las condiciones de trabajo, y te ayudaremos a elegir la opción ideal.</p>
+            </div>
+          </div>
+          <h2 id="accordion-flush-heading-3">
+            <button type="button" class="flex items-center justify-between w-full gap-3 px-3 py-5 font-medium text-gray-500 border-b border-gray-200 rtl:text-right text-start" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
+              <span> ¿Ofrecen garantías en sus productos?</span>
+              <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
+              </svg>
+            </button>
+          </h2>
+          <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
+            <div class="px-3 py-5 border-b border-gray-200 ">
+              <p class="mb-2 text-gray-500 ">Sí, todos nuestros productos cuentan con garantías según la política del fabricante. Si encuentras algún defecto de fábrica, puedes comunicarte con nosotros para gestionar la garantía de manera rápida y eficiente.</p>
+             
+            </div>
+          </div>
+        </div>
+
+    </section>
+    
+
+
+    
+
 
 
 
@@ -426,5 +482,9 @@
           </div>
         </footer>
     
+        <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
+        
+
+
   </body>
 </html>
